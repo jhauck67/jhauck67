@@ -1,18 +1,51 @@
-# 💫 About Me:
-🔭 As a beginner in web development, I am currently working on my own web space. It will be gradually filled with projects and applications that I create as I learn, along with blog articles on optics, eyewear, and technology.<br>🌱 I’m currently learning Javascript.<br>⚡ Fun fact : Fun Fact: The logo for my personal space is a drawing of my favorite glasses. It's my way of seeing the world in pixels and frames! 👓🎨
+# QUEL SITE?
 
+![Bannière du Projet](config/images/github-profile.png)
 
-## 🌐 Socials:
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/jhauckpadowicz) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/jhauckpadowicz) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/jennifer-hauck-b125252a2) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/jenann6787) 
+Découvrez l'intersection fascinante de la technologie, du design et de l'optique. Parcourez mes projets de développement, explorez le style unique de la lunetterie, et restez informé avec des articles sur la tech et la vision.
 
-# 💻 Tech Stack:
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E) ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=flat&logo=markdown&logoColor=white) ![GithubPages](https://img.shields.io/badge/github%20pages-121013?style=flat&logo=github&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=flat&logo=SASS&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=flat&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white) ![Gimp](https://img.shields.io/badge/Gimp-657D8B?style=flat&logo=gimp&logoColor=FFFFFF) ![Plex](https://img.shields.io/badge/plex-%23E5A00D.svg?style=flat&logo=plex&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=flat&logo=notion&logoColor=white) ![Raspberry Pi](https://img.shields.io/badge/-RaspberryPi-C51A4A?style=flat&logo=Raspberry-Pi)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=jhauck67&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=jhauck67&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=jhauck67&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+## Table des matières
 
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=jhauck67&limit=5&theme=nord&combine_all_yearly_contributions=true)
+- [Technologies utilisées](#technologies-utilisées)
+- [Design](#design)
+- [Contact et retours](#contact-et-retours)
+- [Améliorations futures](#améliorations-futures)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## Technologies utilisées
+
+Voici les principales technologies et logiciels utilisés dans ce projet.
+
+- Framework: **Pas de Framework**
+- Langages: **HTML, SASS, JavaScript**
+- Bibliothèques: **Pas de bibliothèques**
+- Autres: **GIMP, Figma, VS Code**
+
+## Design
+
+Voici les informations sur le design de ce site, y compris la palette de couleurs, la typographie et d'autres éléments visuels qui définissent l'esthétique de mon site.
+
+### Palette de couleurs
+
+| Color      | Hex                                                              |
+| ---------- | ---------------------------------------------------------------- |
+| Primaire   | ![#097ca3](https://via.placeholder.com/10/097ca3?text=+) #097ca3 |
+| Secondaire | ![#abff4f](https://via.placeholder.com/10/abff4f?text=+) #abff4f |
+| White      | ![#e0fbfc](https://via.placeholder.com/10/e0fbfc?text=+) #e0fbfc |
+| Grey       | ![#c2dfe3](https://via.placeholder.com/10/c2dfe3?text=+) #c2dfe3 |
+| Black      | ![#001011](https://via.placeholder.com/10/001011?text=+) #001011 |
+
+### Typographie
+
+- **Titres :** BubblegumSans
+- **Corps du texte :** OpenSans
+
+### Elements visuels
+
+## Contact et retours
+
+Pour toute question, suggestion ou simplement pour échanger sur le passionnant croisement de la tech et de l'optique, n'hésitez pas à me contacter. Vos retours sont les bienvenus pour améliorer continuellement cette expérience visuelle et informative.
+
+- **Email :** [jenniferhauck2017@gmail.com](mailto:jenniferhauck2017@gmail.com)
+- **Facebook :** [Jennifer Hauck](https://www.facebook.com/jhauckpadowicz)
+- **Instagram :** [Jennifer Hauck](https://www.instagram.com/jhauckpadowicz/)
+- **Linkedin :** [Jennifer Hauck](https://www.linkedin.com/in/jennifer-hauck-b125252a2/)
