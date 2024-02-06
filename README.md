@@ -2,7 +2,7 @@
 
 ![Bannière du Projet](config/images/github-profile.png)
 
-Découvrez l'intersection fascinante de la technologie, du design et de l'optique. Parcourez mes projets de développement, explorez le style unique de la lunetterie, et restez informé avec des articles sur la tech et la vision.
+Description du projet.
 
 ## Table des matières
 
