@@ -1,0 +1,403 @@
+@font-face {
+  font-family: Bubblegum;
+  src: url(./font/BubblegumSans-Regular.ttf);
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(./font/OpenSans-VariableFont.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+h1,
+h2,
+h3 {
+  font-family: Bubblegum;
+}
+p,
+a,
+li {
+  font-family: OpenSans;
+  font-size: 1.2rem;
+}
+a,
+a:visited {
+  cursor: pointer;
+}
+
+header {
+  padding: 10px;
+  height: 100vh;
+  background: url(./img/bureau-ordinateur-portable-tasse-cafe.jpg) center/cover;
+}
+/* **** NAVBAR **** */
+
+nav {
+  height: 45px;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #c2dfe37a;
+  padding: 10px;
+  border: 0.5px solid #097ca3;
+  border-radius: 10px;
+}
+.link-space {
+  text-transform: uppercase;
+  border: 1px solid #001011;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background: #097ca3;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.link-space a {
+  color: #e0fbfc;
+}
+nav ul {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+nav ul li {
+  padding: 0 5px;
+}
+nav ul li a {
+  color: #097ca3;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+#icons {
+  display: none;
+  cursor: pointer;
+}
+.main {
+  height: 95%;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-text-container {
+  transform: translateX(50%);
+}
+.main-text-container h1 {
+  font-size: 3rem;
+}
+.main-text-container h2 {
+  font-size: 2.7rem;
+  padding: 30px 0;
+}
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.button {
+  border: 1px solid #001011;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+#btn1 {
+  background: #097ca3;
+}
+#btn1 a {
+  color: #e0fbfc;
+}
+#btn2 {
+  background: #e0fbfc;
+  border: 1px solid #c2dfe3;
+}
+#btn2 a {
+  color: #097ca3;
+}
+#apropos {
+  padding: 50px 0;
+}
+.apropos-container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row-reverse;
+  padding: 10px 0;
+}
+.apropos-text-container {
+  width: 50%;
+  padding: 20px;
+}
+.apropos-text-container h3 {
+  font-size: 2.1rem;
+}
+.apropos-text-container ul {
+  padding: 20px 0;
+}
+.apropos-text-container li {
+  font-size: 1.2rem;
+}
+.apropos-text-container p {
+  font-size: 0.9rem;
+  line-height: 1.5em;
+  padding: 10px 0 30px;
+}
+.apropos-img-container {
+  width: 50%;
+  padding: 20px;
+}
+.apropos-img-container img {
+  width: 100%;
+}
+#competences {
+  background: #dfe0e4;
+}
+.competences-container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px 0;
+}
+.competences-container h2 {
+  font-size: 2.4rem;
+  padding: 10px 0;
+}
+.competences-container h3 {
+  font-size: 2.1rem;
+  padding: 10px 0;
+}
+.experiences-container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px 0;
+}
+.experiences-container h2 {
+  font-size: 2.4rem;
+  padding: 10px 0;
+}
+.experiences-container h2:last-of-type {
+  font-size: 2.4rem;
+  padding: 30px 0 10px;
+}
+.exp {
+  padding: 10px 0;
+}
+.exp h3 {
+  font-size: 1.5rem;
+}
+.exp p {
+  font-size: 0.9rem;
+}
+.formation {
+  display: flex;
+  align-items: center;
+}
+.formation p:nth-child(2) {
+  padding: 10px 30px;
+}
+#contact {
+  background: #dfe0e4;
+  padding: 40px;
+}
+.contact-container {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact-container h2 {
+  font-size: 2.4rem;
+}
+.contact-container h3 {
+  font-size: 1.8rem;
+}
+.contact-container a {
+  display: block;
+  color: #097ca3;
+  padding: 5px;
+}
+.contact-container a:first-of-type {
+  padding-top: 20px;
+}
+.contact-container a:last-of-type {
+  display: block;
+  color: #001011;
+  padding: 20px 0;
+}
+footer {
+  background: #dfe0e4;
+  text-align: center;
+}
+footer p {
+  font-size: 0.9rem;
+}
+
+/* **** MEDIA QUERIES **** */
+
+@media screen and (max-width: 1060px) {
+  .link-space a {
+    font-size: 0.9rem;
+  }
+  #nav ul li a {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  #nav #icons {
+    display: block;
+  }
+  #icons:before {
+    content: "\2630";
+    font-size: 1.5rem;
+  }
+  .active #icons:before {
+    content: "\2715";
+    font-size: 1.5rem;
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 54px;
+    flex-direction: column;
+    background: rgba(135, 207, 235, 0.656);
+    border: 1px solid #097ca3;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    transition: 0.25s;
+  }
+  nav li {
+    padding: 3px 0;
+  }
+  nav li:hover {
+    background: rgb(157, 217, 240);
+  }
+  nav.active ul {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main-text-container {
+    transform: translateX(25%);
+  }
+  .apropos-text-container {
+    width: 100%;
+  }
+  .apropos-text-container .button-container {
+    justify-content: flex-start;
+  }
+  .button {
+    margin-right: 10px;
+  }
+  .apropos-img-container {
+    display: none;
+  }
+  .competences-container h2 {
+    font-size: 2.1rem;
+    padding-bottom: 20px;
+  }
+  .competences-container h3 {
+    font-size: 1.5rem;
+  }
+  .competences-container ul {
+    padding-bottom: 20px;
+  }
+  .competences-container ul li {
+    font-size: 0.9rem;
+  }
+  .experiences-container h2 {
+    font-size: 2.1rem;
+  }
+  .formation h2 {
+    font-size: 2.1rem;
+  }
+  .formation p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .link-space a {
+    font-size: 0.9rem;
+  }
+  .main-text-container {
+    transform: translateX(10%);
+  }
+}
+@media screen and (max-width: 470px) {
+  .main {
+    width: 100%;
+  }
+  .main-text-container {
+    transform: translateX(0);
+  }
+  .main-text-container h1 {
+    font-size: 2.1rem;
+  }
+  .main-text-container h2 {
+    font-size: 1.5rem;
+  }
+  .main-text-container p {
+    font-size: 0.7rem;
+  }
+  .button {
+    margin-right: 20px;
+  }
+  .button a {
+    font-size: 0.7rem;
+  }
+  .apropos-text-container h3 {
+    font-size: 1.5rem;
+  }
+  .apropos-text-container ul li {
+    font-size: 0.9rem;
+  }
+  .apropos-text-container p {
+    font-size: 0.7rem;
+  }
+  .competences-container h2 {
+    font-size: 1.5rem;
+  }
+  .competences-container h3 {
+    font-size: 0.9rem;
+  }
+  .competences-container ul li {
+    font-size: 0.7rem;
+  }
+  .competences-container ul {
+    padding-bottom: 10px;
+  }
+  .exp h3 {
+    font-size: 0.9rem;
+  }
+  .exp p {
+    font-size: 0.7rem;
+  }
+  .experiences-container h2 {
+    font-size: 1.5rem;
+  }
+  .experiences-container h2:last-of-type {
+    font-size: 1.5rem;
+  }
+  .formation p {
+    font-size: 0.7rem;
+  }
+  .contact-container h2,
+  .contact-container h3 {
+    font-size: 1.5rem;
+  }
+  .contact-container a {
+    font-size: 0.9rem;
+  }
+}
