@@ -1,5 +1,8 @@
+![github-header](/github-header.png)
+
+
 # 💫 About Me:
-🔭 As a beginner in web development, I am currently working on my own web space. It will be gradually filled with projects and applications that I create as I learn, along with blog articles on optics, eyewear, and technology.<br>🌱 I’m currently learning Javascript.<br>⚡ Fun fact : Fun Fact: The logo for my personal space is a drawing of my favorite glasses. It's my way of seeing the world in pixels and frames! 👓🎨
+Conductrice de train dans la vraie vie, développeuse front-end à mes heures libres. J’aime construire des interfaces web claires, stylées et fonctionnelles. Mon moteur ? Le CSS bien structuré, sans surcouche inutile.
 
 
 ## 🌐 Socials:
