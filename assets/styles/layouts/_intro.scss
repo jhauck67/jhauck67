@@ -1,0 +1,101 @@
+.intro-animation {
+  // ! à enlever
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background: $black;
+  .intro-animation-container {
+    height: 100dvh;
+    @include centerChild;
+    @include maxWidth;
+    .intro-text-container {
+      width: 100%;
+      // Responsive fluid value
+      margin-left: clamp(
+        1px,
+        calc(0.0625rem + ((1vw - 3.2px) * 28.2955)),
+        250px
+      );
+      min-height: 0vw;
+      .flex {
+        display: flex;
+        align-items: center;
+        .dotted {
+          // Responsive fluid value
+          width: clamp(75px, calc(4.6875rem + ((1vw - 3.2px) * 31.25)), 350px);
+          min-height: 0vw;
+          // Responsive fluid value
+          height: clamp(0.75rem, calc(0.75rem + ((1vw - 0.2rem) * 1)), 1.3rem);
+          min-height: 0vw;
+          border-bottom: 2px dotted $white;
+        }
+      }
+    }
+  }
+}
+
+// Animation : apparition des lignes une à une
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+#cursor {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.second {
+  animation-delay: 1s;
+}
+.third {
+  animation-delay: 2s;
+}
+.fourth {
+  animation-delay: 3s;
+}
+.fifth {
+  animation-delay: 4s;
+}
+#cursor {
+  animation-delay: 5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+// Clignotement du curseur
+#cursor {
+  animation-duration: 1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Cacher l'écran d'intro
+.intro-animation {
+  animation: hideIntro 1s ease-out 6s forwards;
+  /* 5s de lecture, puis 5s d’attente avant de disparaître */
+}
+
+@keyframes hideIntro {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

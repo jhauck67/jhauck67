@@ -1,0 +1,26 @@
+header {
+  .header-text-container {
+    @include maxWidth;
+    margin: 40px auto;
+    padding: 20px;
+    h2 {
+      color: $white;
+      padding: 30px 0;
+    }
+  }
+}
+
+//! Il faudra remettre l'animation d'entrée
+// Animation d'entrée
+// header {
+//   opacity: 0;
+//   animation: fadeInSoft 1s ease-out 6.5s forwards;
+// }
+// @keyframes fadeInSoft {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }

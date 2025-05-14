@@ -1,0 +1,327 @@
+@charset "UTF-8";
+/* ---------------------- Liens vers les pages à relier --------------------- */
+/* -------------------------------------------------------------------------- */
+/*                        Réglages de base et généraux                        */
+/* -------------------------------------------------------------------------- */
+/* ---------------------------- Import des fonts ---------------------------- */
+@font-face {
+  font-family: "Orbitron";
+  src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM";
+  src: url(../fonts/IBMPlexSans-VariableFont_wdthwght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrain";
+  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
+  font-display: swap;
+}
+/* --------------------------- Variables et mixins -------------------------- */
+/* ---------------------------- Réglages généraux --------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  min-height: 100dvh;
+  background: #0d0d0d;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: #ffffff;
+  font-family: "IBM", sans-serif;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+h1 {
+  color: #39ff14;
+  font-family: "Orbitron", fantasy;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+h2 {
+  color: #39ff14;
+  font-family: "Orbitron", fantasy;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+p {
+  color: #ffffff;
+  font-family: "IBM", sans-serif;
+  padding: 5px 0;
+}
+
+.code {
+  color: #ffffff;
+  font-family: "JetBrain", monospace;
+}
+
+#cursor {
+  height: 20px;
+  width: 10px;
+  background: #ffffff;
+}
+#cursor svg {
+  height: 28px;
+  width: auto;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                      Réglages size : fluid responsive                      */
+/* -------------------------------------------------------------------------- */
+p,
+p.code {
+  font-size: clamp(0.75rem, 0.75rem + (1vw - 0.2rem) * 1, 1.3rem);
+  min-height: 0vw;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 1.7rem + (1vw - 0.2rem) * 2.3636, 3rem);
+  min-height: 0vw;
+}
+
+h2 {
+  font-size: clamp(1.1rem, 1.1rem + (1vw - 0.2rem) * 1.6364, 2rem);
+  min-height: 0vw;
+}
+
+.intro-animation {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background: #0d0d0d;
+}
+.intro-animation .intro-animation-container {
+  height: 100dvh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.intro-animation .intro-animation-container .intro-text-container {
+  width: 100%;
+  margin-left: clamp(1px, 0.0625rem + (1vw - 3.2px) * 28.2955, 250px);
+  min-height: 0vw;
+}
+.intro-animation .intro-animation-container .intro-text-container .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.intro-animation .intro-animation-container .intro-text-container .flex .dotted {
+  width: clamp(75px, 4.6875rem + (1vw - 3.2px) * 31.25, 350px);
+  min-height: 0vw;
+  height: clamp(0.75rem, 0.75rem + (1vw - 0.2rem) * 1, 1.3rem);
+  min-height: 0vw;
+  border-bottom: 2px dotted #ffffff;
+}
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+#cursor {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.5s ease forwards;
+          animation: fadeIn 0.5s ease forwards;
+}
+
+.second {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.third {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.fourth {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.fifth {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+#cursor {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+#cursor {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: clignoter;
+          animation-name: clignoter;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition: none;
+  transition: none;
+}
+
+@-webkit-keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.intro-animation {
+  -webkit-animation: hideIntro 1s ease-out 6s forwards;
+          animation: hideIntro 1s ease-out 6s forwards;
+  /* 5s de lecture, puis 5s d’attente avant de disparaître */
+}
+
+@-webkit-keyframes hideIntro {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hideIntro {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+header .header-text-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin: 40px auto;
+  padding: 20px;
+}
+header .header-text-container h2 {
+  color: #ffffff;
+  padding: 30px 0;
+}
+
+section#whoami,
+section#projects,
+section#blog,
+section#contact {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.folder {
+  background: #2d2d2d;
+  border: 1px solid #7f8c8d;
+  -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 25% 0%, 30% 1.5em, 70% 1.5em, 75% 0%, 100% 0%);
+          clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 25% 0%, 30% 1.5em, 70% 1.5em, 75% 0%, 100% 0%);
+  padding: 10px;
+  margin: 20px 0;
+  width: min(90vw, 900px);
+  -webkit-box-shadow: 0 4px 8px rgba(57, 255, 20, 0.15);
+          box-shadow: 0 4px 8px rgba(57, 255, 20, 0.15);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.folder h2 label {
+  cursor: pointer;
+}
+.folder h2 label::before {
+  content: ">";
+  display: inline-block;
+  margin-right: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.folder h2 .sr-only {
+  margin-bottom: 10px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.folder .folder-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+
+input[type=radio]:checked + .folder .folder-content {
+  max-height: 500px;
+}
+
+input[type=radio]:checked + .folder h2 label::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}/*# sourceMappingURL=index.css.map */

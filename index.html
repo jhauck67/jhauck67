@@ -7,65 +7,257 @@
     <!-- ------------- Titre, Meta Description, Favicon et Auteur -------------- -->
 
     <!--1 Titre de l'onglet (entre 50 et 60 caractères) -->
-    <title>
-      <!--todo: Le titre de la page doit comporter entre 50 et 60 caractères-->
-    </title>
+    <title>Jennifer bidouille le Web – HTML, CSS & clins d’œil geek</title>
 
     <!-- 1 Meta description -->
     <meta
       name="description"
-      content="<!--todo: La description de la page doit comporter entre 150 et 160 caractères -->"
+      content="Bienvenue dans le système Jennifer-OS. Ce terminal créatif répertorie mes projets web, expériences front-end et notes de bord techniques. HTML/CSS only (pour l’instant)."
     />
 
     <!-- 1 Les favicons -->
     <!-- favicon au format ICO -->
-    <link rel="icon" type="image/x-icon" href="<!--todo: favicon.ico-->" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/img/icons/favicon.ico"
+    />
     <!-- favicon au format SVG -->
-    <link rel="icon" type="image/svg+xml" href="<!--todo: favicon.svg-->" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/img/icons/favicon.svg"
+    />
     <!-- favicon au format PNG -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="<!--todo: favicon.png-->"
+      href="./assets/img/icons/favicon32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="<!--todo: favicon.png-->"
+      href="./assets/img/icons/favicon16x16.png"
     />
     <!-- icone pour Apple Touch -->
     <link
-      rel="apple-touh-icon"
+      rel="apple-touch-icon"
       sizes="180x180"
-      href="<!--todo: apple-touch-icon.png-->"
+      href="./assets/img/icons/apple-touch-icon.png"
     />
 
     <!-- 1 Auteur -->
     <meta name="author" content="Jhauck67" />
 
-    <!-- ------------------------- Facebook Meta Tags -------------------------- -->
-    <!--todo: Coller les meta-tags générés à partir de opengraph.xyz-->
+    <!-- ------------------------- OpenGraph Meta Tags -------------------------- -->
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://jhauck67.github.io/jhauck67/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Jennifer bidouille le Web (avec style)"
+    />
+    <meta
+      property="og:description"
+      content="Un espace personnel entre UI futuriste et journal de bord numérique. Projets d’intégration, réflexions techniques, et une esthétique rétro-geek assumée."
+    />
+    <meta
+      property="og:image"
+      content="https://opengraph.b-cdn.net/production/images/a25b2f35-db9d-4b50-b949-ab29db297092.png?token=oPX6LDvuWvhTq3HN0xC17tYJrtN88ad408sj_3gTOYE&height=604&width=1200&expires=33283240443"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="jhauck67.github.io" />
+    <meta
+      property="twitter:url"
+      content="https://jhauck67.github.io/jhauck67/"
+    />
+    <meta
+      name="twitter:title"
+      content="Jennifer bidouille le Web (avec style)"
+    />
+    <meta
+      name="twitter:description"
+      content="Un espace personnel entre UI futuriste et journal de bord numérique. Projets d’intégration, réflexions techniques, et une esthétique rétro-geek assumée."
+    />
+    <meta
+      name="twitter:image"
+      content="https://opengraph.b-cdn.net/production/images/a25b2f35-db9d-4b50-b949-ab29db297092.png?token=oPX6LDvuWvhTq3HN0xC17tYJrtN88ad408sj_3gTOYE&height=604&width=1200&expires=33283240443"
+    />
 
     <!-- ------------------------ Feuille de style CSS ------------------------- -->
-    <link rel="preload" href="<!--todo index.css-->" as="style" />
+    <link rel="preload" href="./assets/styles/index.css" as="style" />
     <!-- permet de précharger la feuille de style css -->
-    <link rel="stylesheet" href="<!--todo index.css-->" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
     <!-- feuille de style CSS -->
-
-    <!-- --------------------------- Preload des images --------------------------- -->
-    <!-- permet de précharger les images importantes -->
-    <!--todo <link rel="preload" href="./chemin/vers/imges.webp" as="image" type="image/webp"/>-->
   </head>
+
   <!-- ----------------------------------------------------------------------- -->
   <!--                             DEBUT DE LA PAGE                            -->
   <!-- ----------------------------------------------------------------------- -->
   <body>
-    <nav></nav>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <!-- Page animation introduction -->
+    <div class="intro-animation">
+      <div class="intro-animation-container">
+        <div class="intro-text-container">
+          <div class="first flex">
+            <p class="code">[Initializing hardware</p>
+            <div class="dotted code"></div>
+            <p class="code">OK]</p>
+          </div>
+          <div class="second flex">
+            <p class="code">[Loading kernel</p>
+            <div class="dotted code"></div>
+            <p class="code">OK]</p>
+          </div>
+          <div class="third flex">
+            <p class="code">[Starting services</p>
+            <div class="dotted code"></div>
+            <p class="code">OK]</p>
+          </div>
+          <div class="fourth flex">
+            <p class="code">[Mounting filesystems</p>
+            <div class="dotted code"></div>
+            <p class="code">OK]</p>
+          </div>
+          <p class="code fifth">[Welcome to JENNIFER-OS v1.0.0]</p>
+          <div id="cursor" class="sixth">
+            <svg
+              aria-hidden="true"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#0d0d0d"
+              stroke="#ffffff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g id="train" transform="translate(-2 -5)">
+                  <path
+                    id="secondary"
+                    fill="#39ff14"
+                    d="M13,14a1,1,0,0,1-1-1V10H4a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1,7,7,0,0,0-.68-3Z"
+                  ></path>
+                  <path
+                    id="primary"
+                    d="M7,14H8m2-8h6M12,6v4m9,7h0a7,7,0,0,0-7-7H4a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1H20A1,1,0,0,0,21,17Zm-7-7H12v3a1,1,0,0,0,1,1h7.32A7,7,0,0,0,14,10Z"
+                    fill="none"
+                    stroke="#39ff14000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header>
+      <div class="header-text-container">
+        <h1>Bienvenue sur mon terminal perso</h1>
+        <h2>Une interface un peu geek pour coder, apprendre et partager</h2>
+        <p>
+          Je m'appelle Jennifer, je suis conductrice de train et j'apprends le
+          développement web sur mon temps libre.
+        </p>
+        <p>
+          Tu peux explorer les sections ci-dessous en cliquant sur les dossiers.
+        </p>
+        <p>Chaque commande t'ouvre un nouvel onglet de mon univers.</p>
+      </div>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Section "whoami" -->
+      <section id="whoami">
+        <input type="radio" name="accordeon" id="first" />
+        <div class="folder">
+          <h2>
+            <label for="first">whoami </label>
+            <span class="sr-only">A propos de moi</span>
+          </h2>
+          <div class="folder-content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+              optio delectus, autem cupiditate rem iste modi, placeat laborum
+              dolorum quidem ullam, sunt eos ut dignissimos natus a nulla fugit
+              sapiente libero. Natus soluta veritatis quidem similique, nam
+              ducimus, enim quas accusamus minima voluptate error dignissimos
+              libero architecto recusandae amet aliquam.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <input type="radio" name="accordeon" id="second" />
+        <div class="folder">
+          <h2>
+            <label for="second">ls projects/</label>
+            <span class="sr-only">Mes projets</span>
+          </h2>
+          <div class="folder-content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+              optio delectus, autem cupiditate rem iste modi, placeat laborum
+              dolorum quidem ullam, sunt eos ut dignissimos natus a nulla fugit
+              sapiente libero. Natus soluta veritatis quidem similique, nam
+              ducimus, enim quas accusamus minima voluptate error dignissimos
+              libero architecto recusandae amet aliquam.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="blog">
+        <input type="radio" name="accordeon" id="third" />
+        <div class="folder">
+          <h2>
+            <label for="third">blog --tag devlog/</label>
+            <span class="sr-only">Journal de bord du dev web</span>
+          </h2>
+          <div class="folder-content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+              optio delectus, autem cupiditate rem iste modi, placeat laborum
+              dolorum quidem ullam, sunt eos ut dignissimos natus a nulla fugit
+              sapiente libero. Natus soluta veritatis quidem similique, nam
+              ducimus, enim quas accusamus minima voluptate error dignissimos
+              libero architecto recusandae amet aliquam.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <input type="radio" name="accordeon" id="fourth" />
+        <div class="folder">
+          <h2>
+            <label for="fourth">contact --msg/</label>
+            <span class="sr-only">Me contacter</span>
+          </h2>
+          <div class="folder-content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+              optio delectus, autem cupiditate rem iste modi, placeat laborum
+              dolorum quidem ullam, sunt eos ut dignissimos natus a nulla fugit
+              sapiente libero. Natus soluta veritatis quidem similique, nam
+              ducimus, enim quas accusamus minima voluptate error dignissimos
+              libero architecto recusandae amet aliquam.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
 <!-- ----------------------------------------------------------------------- -->
