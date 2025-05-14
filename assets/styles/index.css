@@ -104,7 +104,6 @@ h2 {
 }
 
 .intro-animation {
-  display: none;
   position: absolute;
   width: 100%;
   z-index: 100;
@@ -258,6 +257,29 @@ header .header-text-container h2 {
   padding: 30px 0;
 }
 
+header {
+  opacity: 0;
+  -webkit-animation: fadeInSoft 1s ease-out 6.5s forwards;
+          animation: fadeInSoft 1s ease-out 6.5s forwards;
+}
+
+@-webkit-keyframes fadeInSoft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 section#whoami,
 section#projects,
 section#blog,
@@ -324,4 +346,19 @@ input[type=radio]:checked + .folder .folder-content {
 input[type=radio]:checked + .folder h2 label::before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+main {
+  opacity: 0;
+  -webkit-animation: fadeInSoft 1s ease-out 7s forwards;
+          animation: fadeInSoft 1s ease-out 7s forwards;
+}
+
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=index.css.map */

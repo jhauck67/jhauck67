@@ -66,15 +66,15 @@ input[type="radio"]:checked + .folder h2 label::before {
 
 //! Il faudra remettre l'animation d'entrée
 // Animation d'entrée
-// main {
-//   opacity: 0;
-//   animation: fadeInSoft 1s ease-out 7s forwards;
-// }
-// @keyframes fadeInSoft {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
+main {
+  opacity: 0;
+  animation: fadeInSoft 1s ease-out 7s forwards;
+}
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
