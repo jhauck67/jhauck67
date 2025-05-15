@@ -103,7 +103,10 @@ p {
 // Passage de 1.3rem à 0.75rem
 p,
 p.code,
-label {
+label,
+#submit-button,
+a,
+h3 {
   font-size: clamp(0.75rem, calc(0.75rem + ((1vw - 0.2rem) * 1)), 1.3rem);
   min-height: 0vw;
 }

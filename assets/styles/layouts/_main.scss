@@ -23,8 +23,11 @@ input[type="radio"] {
     100% 0%
   );
   padding: 10px;
-  margin: 20px 0;
-  width: min(90vw, 900px);
+  margin: 20px auto;
+  width: 80%;
+  @media screen and (max-width: 770px) {
+    width: 100%;
+  }
   box-shadow: 0 4px 8px rgba(57, 255, 20, 0.15);
   transition: transform 0.3s ease;
 
@@ -127,7 +130,12 @@ input[type="radio"] {
         input[type="text"],
         input[type="email"],
         textarea {
-          width: 250px;
+          width: clamp(
+            130px,
+            calc(8.125rem + ((1vw - 3.2px) * 13.6364)),
+            250px
+          );
+          min-height: 0vw;
           font-family: $text;
           color: $grey;
         }
@@ -143,7 +151,7 @@ input[type="radio"] {
           display: none;
         }
         #submit-button {
-          padding: 10px 25px;
+          padding: 5px 10px;
           margin: 10px 0;
           background: $white;
           border: 1px solid $grey;
@@ -157,7 +165,7 @@ input[type="radio"] {
   }
 }
 input[type="radio"]:checked + .folder .folder-content {
-  max-height: 1500px;
+  max-height: 5000px;
 }
 
 input[type="radio"]:checked + .folder h2 label::before {
