@@ -111,7 +111,7 @@
 
 ## Vérification de la sémantique
 
-- [ ] Vérifier qu'il n'y a pas d'erreurs sémantiques dans le code.
+- [x] Vérifier qu'il n'y a pas d'erreurs sémantiques dans le code.
 
 > On pourra utiliser le site [Markup Validation service](https://validator.w3.org/)
 

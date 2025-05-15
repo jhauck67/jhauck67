@@ -159,6 +159,10 @@ _Description des bonnes pratiques_
 
 _Description du SEO_
 
+# A faire :
+
+- [ ] Modification de la section #blog et ajout d'un lien vers la page blog
+
 # Améliorations possibles :
 
 - [ ] Optimisation des éléments visuels :

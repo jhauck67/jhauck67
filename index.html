@@ -1,64 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <!-- ====== 🧠 [HEAD] : Titre, Meta Datas et Styles ====== -->
   <head>
+    <!-- Charset et responsive -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ------------- Titre, Meta Description, Favicon et Auteur -------------- -->
-
-    <!--1 Titre de l'onglet (entre 50 et 60 caractères) -->
+    <!-- ====== 🔖 [META TAGS PAGE] ====== -->
+    <!-- Titre -->
     <title>Jennifer bidouille le Web – HTML, CSS & clins d’œil geek</title>
-
-    <!-- 1 Meta description -->
+    <!-- Meta Description -->
     <meta
       name="description"
       content="Bienvenue dans le système Jennifer-OS. Ce terminal créatif répertorie mes projets web, expériences front-end et notes de bord techniques. HTML/CSS only (pour l’instant)."
     />
-
-    <!-- 1 Les favicons -->
-    <!-- favicon au format ICO -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/img/icons/favicon.ico"
-    />
-    <!-- favicon au format SVG -->
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="./assets/img/icons/favicon.svg"
-    />
-    <!-- favicon au format PNG -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/img/icons/favicon32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/img/icons/favicon16x16.png"
-    />
-    <!-- icone pour Apple Touch -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/img/icons/apple-touch-icon.png"
-    />
-
-    <!-- 1 Auteur -->
+    <!-- favicon.ico -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/icons/favicon.ico" />
+    <!-- favicon.svg -->
+    <link rel="icon" type="image/svg+xml" href="./assets/img/icons/favicon.svg" />
+    <!-- favicon.png -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/icons/favicon32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/icons/favicon16x16.png" />
+    <!-- Apple-touch-icon.png -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/icons/apple-touch-icon.png" />
+    <!-- Auteur -->
     <meta name="author" content="Jhauck67" />
 
-    <!-- ------------------------- OpenGraph Meta Tags -------------------------- -->
+    <!-- ====== 🔖 [OPENGRAPH META TAGS] ====== -->
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://jhauck67.github.io/jhauck67/" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Jennifer bidouille le Web (avec style)"
-    />
+    <meta property="og:title" content="Jennifer bidouille le Web (avec style)" />
     <meta
       property="og:description"
       content="Un espace personnel entre UI futuriste et journal de bord numérique. Projets d’intégration, réflexions techniques, et une esthétique rétro-geek assumée."
@@ -67,18 +39,11 @@
       property="og:image"
       content="https://jhauck67.github.io/jhauck67/assets/sketch/opengraph.png"
     />
-
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="jhauck67.github.io" />
-    <meta
-      property="twitter:url"
-      content="https://jhauck67.github.io/jhauck67/"
-    />
-    <meta
-      name="twitter:title"
-      content="Jennifer bidouille le Web (avec style)"
-    />
+    <meta property="twitter:url" content="https://jhauck67.github.io/jhauck67/" />
+    <meta name="twitter:title" content="Jennifer bidouille le Web (avec style)" />
     <meta
       name="twitter:description"
       content="Un espace personnel entre UI futuriste et journal de bord numérique. Projets d’intégration, réflexions techniques, et une esthétique rétro-geek assumée."
@@ -88,20 +53,19 @@
       content="https://jhauck67.github.io/jhauck67/assets/sketch/opengraph.png"
     />
 
-    <!-- ------------------------ Feuille de style CSS ------------------------- -->
+    <!-- ====== 🎨 [FEUILLE DE STYLE CSS] ====== -->
+    <!-- Précharger la feuille de style css -->
     <link rel="preload" href="./assets/styles/index.css" as="style" />
-    <!-- permet de précharger la feuille de style css -->
+    <!-- Lien vers la feuille de style css -->
     <link rel="stylesheet" href="./assets/styles/index.css" />
-    <!-- feuille de style CSS -->
   </head>
 
-  <!-- ----------------------------------------------------------------------- -->
-  <!--                             DEBUT DE LA PAGE                            -->
-  <!-- ----------------------------------------------------------------------- -->
+  <!-- ===== 📄 [BODY] : Début du site ====== -->
   <body>
-    <!-- Page animation introduction -->
+    <!-- 🎞️ [PAGE D'INTRODUCTION] avec animation -->
     <div class="intro-animation">
       <div class="intro-animation-container">
+        <!-- Lignes de code qui s'affichent -->
         <div class="intro-text-container">
           <div class="first flex">
             <p class="code">[Initializing hardware</p>
@@ -124,9 +88,11 @@
             <p class="code">OK]</p>
           </div>
           <p class="code fifth">[Welcome to JENNIFER-OS v1.0.0]</p>
+          <!-- Curseur avec un train en SVG -->
           <div id="cursor" class="sixth">
             <svg
-              aria-hidden="true"
+              role="img"
+              aria-label="Curseur de démarrage, train stylisé"
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -135,11 +101,7 @@
               stroke="#ffffff"
             >
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
               <g id="SVGRepo_iconCarrier">
                 <g id="train" transform="translate(-2 -5)">
                   <path
@@ -163,35 +125,39 @@
         </div>
       </div>
     </div>
-    <!-- Header -->
+    <!-- 🧱 [HEADER] -->
     <header>
       <div class="header-text-container">
         <h1>Bienvenue sur mon terminal perso</h1>
         <h2>Une interface un peu geek pour coder, apprendre et partager</h2>
         <p>
-          Je m'appelle Jennifer, je suis conductrice de train et j'apprends le
-          développement web sur mon temps libre.
+          Je m'appelle Jennifer, je suis conductrice de train et j'apprends le développement web sur
+          mon temps libre.
         </p>
-        <p>
-          Tu peux explorer les sections ci-dessous en cliquant sur les dossiers.
-        </p>
+        <p>Tu peux explorer les sections ci-dessous en cliquant sur les dossiers.</p>
         <p>Chaque commande t'ouvre un nouvel onglet de mon univers.</p>
       </div>
     </header>
-    <!-- Main -->
+    <!-- 🧩 [MAIN] -->
     <main>
-      <!-- Section "whoami" -->
+      <!-- 👩‍💻 Section [ID="whoami"] : Présentation personnelle -->
       <section id="whoami">
+        <!-- Input pour le menu accordéon -->
         <input type="radio" name="accordeon" id="first" />
+        <!-- Folder = h2 avec label + content-folder -->
         <div class="folder">
           <h2>
-            <label for="first">whoami </label>
+            <label for="first">whoami</label>
             <span class="sr-only">A propos de moi</span>
           </h2>
           <div class="folder-content">
             <div class="screen">
-              <p>Fichier trouvé : <span class="pre">README.md</span></p>
+              <p>
+                Fichier trouvé :
+                <span class="pre">README.md</span>
+              </p>
               <div class="markdown">
+                <!-- Fiche de présentation -->
                 <div class="paragraph">
                   <p>Nom : Jennifer</p>
                   <p>Alias : jhauck67</p>
@@ -200,52 +166,55 @@
                   <p>Langages : HTML, CSS et un soupçon de JS</p>
                 </div>
                 <div class="separator">---</div>
+                <!-- Petite introduction -->
                 <div class="paragraph">
                   <p>
-                    Je découvre le développement web petit à petit — une
-                    transition entre les rails du monde physique et les lignes
-                    de code du monde numérique.
+                    Je découvre le développement web petit à petit — une transition entre les rails
+                    du monde physique et les lignes de code du monde numérique.
                   </p>
                   <p>
-                    J’avance à mon rythme (et souvent tard le soir), avec
-                    l’envie de comprendre comment les choses fonctionnent
-                    <em>sous le capot</em>.
+                    J’avance à mon rythme (et souvent tard le soir), avec l’envie de comprendre
+                    comment les choses fonctionnent
+                    <em>sous le capot</em>
+                    .
                   </p>
                 </div>
                 <div class="paragraph">
                   <p>
-                    Mon parcours est peut-être atypique, mais il m’a appris à
-                    être rigoureuse, réactive, et autonome.
+                    Mon parcours est peut-être atypique, mais il m’a appris à être rigoureuse,
+                    réactive, et autonome.
                   </p>
                   <p>
-                    Et spoiler : ça aide aussi quand le train s’arrête au milieu
-                    de nulle part 👀
+                    Et spoiler : ça aide aussi quand le train s’arrête au milieu de nulle part 👀
                   </p>
                 </div>
                 <div class="paragraph">
                   <p>Ce terminal est mon terrain de jeu. Tu y trouveras :</p>
                   <ul>
-                    <!-- !Mettre le lien vers les projets -->
+                    <!--TODO Mettre le lien vers les projets -->
                     <li>
                       <a href="#">- Mes projets</a>
                       <p>(plus ou moins terminés mais 100% faits maison)</p>
                     </li>
-                    <!-- !Mettre le lien vers le blog -->
+                    <!--TODO Mettre le lien vers le blog -->
                     <li>
                       <a href="#">- Mes notes techniques</a>
                       <p>, triées par tags</p>
                     </li>
+                    <!--TODO Mettre le lien vers le blog -->
                     <li>
                       <a href="#">- Quelques idées pour la suite</a>
                     </li>
                   </ul>
                 </div>
                 <div class="separator">---</div>
+                <!-- Amélioration(s) à venir -->
                 <div class="paragraph">
                   <p>
-                    🛠️ <strong>En chantier</strong> : une version interactive,
-                    avec plus de fonctionnalités. Mais pour l’instant, clique
-                    sur un dossier pour continuer l’exploration.
+                    🛠️
+                    <strong>En chantier</strong>
+                    : une version interactive, avec plus de fonctionnalités. Mais pour l’instant,
+                    clique sur un dossier pour continuer l’exploration.
                   </p>
                 </div>
               </div>
@@ -253,9 +222,11 @@
           </div>
         </div>
       </section>
-      <!-- Section "ls projetcs" -->
+      <!-- 💾 Section "ls projetcs" -->
       <section id="projects">
+        <!-- Input pour le menu accordéon -->
         <input type="radio" name="accordeon" id="second" />
+        <!-- Folder = h2 avec label + content-folder -->
         <div class="folder">
           <h2>
             <label for="second">ls projects/</label>
@@ -264,9 +235,13 @@
           <div class="folder-content">
             <div class="screen">
               <div class="paragraph">
-                <p>Contenu du dossier <span class="pre">projects/</span> :</p>
+                <p>
+                  Contenu du dossier
+                  <span class="pre">projects/</span>
+                  :
+                </p>
                 <ul>
-                  <!-- !Mettre les liens vers projets -->
+                  <!--TODO Mettre les liens vers projets -->
                   <li><a href="#">📁 integrations/</a></li>
                   <li><a href="#">📁 interactions/</a></li>
                   <li><a href="#">📁 experiments/</a></li>
@@ -274,70 +249,77 @@
                 </ul>
                 <div class="markdown">
                   <div class="paragraph">
-                    <h3>📁 <a href="#">integrations/</a></h3>
+                    <!--TODO Mettre le lien vers projets -->
+                    <h3>
+                      📁
+                      <a href="#">integrations/</a>
+                    </h3>
                     <p>Maquettes intégrées à la main, ligne par ligne.</p>
                     <p>
-                      Pixel-perfect (ou presque) et responsive, comme les devs
-                      de l'ancien temps.
+                      Pixel-perfect (ou presque) et responsive, comme les devs de l'ancien temps.
                     </p>
                     <p>
-                      Tu y trouveras mes exercices de fidélité visuelle :
-                      reproduction de designs, sites fictifs, et autres
-                      entraînements front-end <strong>sans filet</strong> (ni
-                      framework, ni JS).
+                      Tu y trouveras mes exercices de fidélité visuelle : reproduction de designs,
+                      sites fictifs, et autres entraînements front-end
+                      <strong>sans filet</strong>
+                      (ni framework, ni JS).
                     </p>
-                    <p class="status">
-                      &gt; Statut : stable & alimenté régulièrement
-                    </p>
+                    <p class="status">&gt; Statut : stable & alimenté régulièrement</p>
                   </div>
                   <div class="separator">---</div>
                   <div class="paragraph">
-                    <h3>📁 <a href="#">interactions/</a></h3>
+                    <!--TODO Mettre le lien vers projets -->
+                    <h3>
+                      📁
+                      <a href="#">interactions/</a>
+                    </h3>
                     <p>Premier contact avec la Force… de JavaScript ✨</p>
                     <p>
-                      Ici, je m’amuse à rendre les interfaces un peu plus
-                      vivantes : menus qui s’ouvrent, contenus qui s’affichent,
-                      boutons qui font des trucs.
+                      Ici, je m’amuse à rendre les interfaces un peu plus vivantes : menus qui
+                      s’ouvrent, contenus qui s’affichent, boutons qui font des trucs.
                     </p>
                     <p>
-                      Tout en vanilla JS, parce qu’il faut bien apprendre à
-                      marcher avant de sauter dans React.
+                      Tout en vanilla JS, parce qu’il faut bien apprendre à marcher avant de sauter
+                      dans React.
                     </p>
-                    <p class="status">
-                      &gt; Statut : en cours d’électrification
-                    </p>
+                    <p class="status">&gt; Statut : en cours d’électrification</p>
                   </div>
                   <div class="separator">---</div>
                   <div class="paragraph">
-                    <h3>📁 <a href="#">experiments/</a></h3>
+                    <!--TODO Mettre le lien vers projets -->
+                    <h3>
+                      📁
+                      <a href="#">experiments/</a>
+                    </h3>
                     <p>Labo secret. Zone de tests.</p>
                     <p>
-                      Ce dossier contient mes projets <em>un peu chelous</em>,
-                      mes animations faites à la sueur du keyframe, et tout ce
-                      qui ne rentrait dans aucune case.
+                      Ce dossier contient mes projets
+                      <em>un peu chelous</em>
+                      , mes animations faites à la sueur du keyframe, et tout ce qui ne rentrait
+                      dans aucune case.
                     </p>
                     <p>
-                      Style ? Terminal simulé, glitchs CSS, CV interactif, ou
-                      effets de texte qui clignotent (mais avec goût, hein).
+                      Style ? Terminal simulé, glitchs CSS, CV interactif, ou effets de texte qui
+                      clignotent (mais avec goût, hein).
                     </p>
                     <p class="status">&gt; Statut : instable mais marrant</p>
                   </div>
                   <div class="separator">---</div>
                   <div class="paragraph">
-                    <h3>📁 <a href="#">apps/</a></h3>
+                    <!--TODO Mettre le lien vers projets -->
+                    <h3>
+                      📁
+                      <a href="#">apps/</a>
+                    </h3>
                     <p>Pour l’instant, c’est un dossier vide… ou presque.</p>
                     <p>
-                      Mais un jour, il contiendra des <em>vraies</em> apps
-                      front-end : des trucs avec des appels API, de la logique
-                      utilisateur, du stockage local, etc.
+                      Mais un jour, il contiendra des
+                      <em>vraies</em>
+                      apps front-end : des trucs avec des appels API, de la logique utilisateur, du
+                      stockage local, etc.
                     </p>
-                    <p>
-                      Bref, ce dossier est un peu comme une promesse. (Ou une
-                      TODO.)
-                    </p>
-                    <p class="status">
-                      &gt; Statut : 💡 idée en cours de chargement
-                    </p>
+                    <p>Bref, ce dossier est un peu comme une promesse. (Ou une TODO.)</p>
+                    <p class="status">&gt; Statut : 💡 idée en cours de chargement</p>
                   </div>
                 </div>
               </div>
@@ -345,9 +327,11 @@
           </div>
         </div>
       </section>
-      <!-- Section "blog" -->
+      <!-- 📚 Section "blog" -->
       <section id="blog">
+        <!-- Input pour le menu accordéon -->
         <input type="radio" name="accordeon" id="third" />
+        <!-- Folder = h2 avec label + content-folder -->
         <div class="folder">
           <h2>
             <label for="third">blog --tag devlog/</label>
@@ -355,40 +339,37 @@
           </h2>
           <div class="folder-content">
             <div class="screen">
-              <p>
-                Aucun fichier pour l’instant, mais le dossier est prêt à
-                accueillir des logs.
-              </p>
+              <p>Aucun fichier pour l’instant, mais le dossier est prêt à accueillir des logs.</p>
               <div class="paragraph">
                 <p>Ici, je compilerai mes aventures en développement web :</p>
                 <p>
-                  HTML trop verbeux, CSS capricieux, Git qui fait la tête, Figma
-                  qui s’ouvre lentement, et JavaScript qui fait… du JavaScript.
+                  HTML trop verbeux, CSS capricieux, Git qui fait la tête, Figma qui s’ouvre
+                  lentement, et JavaScript qui fait… du JavaScript.
                 </p>
               </div>
               <div class="paragraph">
                 <p>
-                  Bref : un journal honnête et désorganisé de ce que j’apprends,
-                  teste, ou démonte (par erreur) en construisant des projets.
+                  Bref : un journal honnête et désorganisé de ce que j’apprends, teste, ou démonte
+                  (par erreur) en construisant des projets.
                 </p>
-                <p>
-                  Une sorte de mémoire vive personnelle, et peut-être un peu
-                  collective aussi.
-                </p>
+                <p>Une sorte de mémoire vive personnelle, et peut-être un peu collective aussi.</p>
               </div>
               <div class="citation">
                 <p>
-                  &gt; À suivre : <span class="pre">log_001.md</span> — dès que
-                  j’arrête de réorganiser mes dossiers…
+                  &gt; À suivre :
+                  <span class="pre">log_001.md</span>
+                  — dès que j’arrête de réorganiser mes dossiers…
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Section "contact" -->
+      <!-- 📱 Section "contact" -->
       <section id="contact">
+        <!-- Input pour le menu accordéon -->
         <input type="radio" name="accordeon" id="fourth" />
+        <!-- Folder = h2 avec label + content-folder -->
         <div class="folder">
           <h2>
             <label for="fourth">contact --msg/</label>
@@ -398,51 +379,50 @@
             <div class="screen">
               <div class="paragraph">
                 <p>
-                  Pas de backend ici, juste un formulaire pour faire joli. Mais
-                  si tu veux vraiment me contacter, voici ce qu’il faut savoir :
+                  Pas de backend ici, juste un formulaire pour faire joli. Mais si tu veux vraiment
+                  me contacter, voici ce qu’il faut savoir :
                 </p>
                 <p>
-                  Tu peux remplir le formulaire qui ne fera rien, ou simplement
-                  m'envoyer un message à l’adresse ci-dessous. 🤖
+                  Tu peux remplir le formulaire qui ne fera rien, ou simplement m'envoyer un message
+                  à l’adresse ci-dessous. 🤖
                 </p>
               </div>
               <div class="separator">---</div>
               <div class="paragraph">
                 <p><strong>📧 Email :</strong></p>
-                <!-- ! Remplir l'email -->
+                <!--TODO Remplir l'email -->
                 <p>
                   Tu peux m’écrire à
-                  <a href="mailto:jennifer@example.com">jennifer@example.com</a
-                  >, je serai ravie de te répondre (sauf si je suis en train de
-                  déboguer, dans ce cas je vais probablement oublier de manger).
+                  <a href="mailto:jennifer@example.com">jennifer@example.com</a>
+                  , je serai ravie de te répondre (sauf si je suis en train de déboguer, dans ce cas
+                  je vais probablement oublier de manger).
                 </p>
               </div>
               <div class="paragraph">
                 <p><strong>📱 Réseaux sociaux :</strong></p>
                 <p>
-                  Je suis aussi sur les plateformes sociales, si tu veux
-                  échanger, partager des memes, ou me poser des questions sur le
-                  code.
+                  Je suis aussi sur les plateformes sociales, si tu veux échanger, partager des
+                  memes, ou me poser des questions sur le code.
                 </p>
                 <ul>
-                  <!-- ! Remplir le lien github -->
+                  <!--TODO Remplir le lien github -->
                   <li><a href="#">GitHub</a></li>
-                  <!-- ! Remplir le lien linkedin -->
+                  <!--TODO Remplir le lien linkedin -->
                   <li><a href="#">Linkedin</a></li>
-                  <!-- ! Remplir le lien codepen -->
+                  <!--TODO Remplir le lien codepen -->
                   <li><a href="#">Codepen</a></li>
                 </ul>
               </div>
               <div class="separator">---</div>
               <div class="citation">
                 <p>
-                  <strong>Disclaimer</strong>: Si tu veux vraiment utiliser le
-                  formulaire, c’est cool aussi. Je t’avertis juste qu’il est…
-                  plus décoratif que fonctionnel pour l’instant. 😜
+                  <strong>Disclaimer</strong>
+                  : Si tu veux vraiment utiliser le formulaire, c’est cool aussi. Je t’avertis juste
+                  qu’il est… plus décoratif que fonctionnel pour l’instant. 😜
                 </p>
               </div>
               <div class="separator">---</div>
-              <form action="">
+              <form>
                 <label for="name">Nom :</label>
                 <input
                   type="text"
@@ -460,18 +440,12 @@
                   placeholder="ton@email.com"
                 />
                 <label for="message">Message :</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Ton message ici..."
-                ></textarea>
+                <textarea name="message" id="message" placeholder="Ton message ici..."></textarea>
                 <input type="checkbox" name="submit" id="submit" />
-                <label for="submit" id="submit-button"
-                  >Envoyer le message</label
-                >
+                <label for="submit" id="submit-button">Envoyer le message</label>
                 <p class="confirmation-message">
-                  Merci pour ton message ! Je reviendrai vers toi… dès que je
-                  trouve comment ça marche. 😉
+                  Merci pour ton message ! Je reviendrai vers toi… dès que je trouve comment ça
+                  marche. 😉
                 </p>
               </form>
             </div>
@@ -481,6 +455,3 @@
     </main>
   </body>
 </html>
-<!-- ----------------------------------------------------------------------- -->
-<!--                             FIN DE LA PAGE                              -->
-<!-- ----------------------------------------------------------------------- -->
