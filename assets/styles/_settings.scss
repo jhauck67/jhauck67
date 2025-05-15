@@ -102,7 +102,8 @@ p {
 // 1 de 1200px à 320px
 // Passage de 1.3rem à 0.75rem
 p,
-p.code {
+p.code,
+label {
   font-size: clamp(0.75rem, calc(0.75rem + ((1vw - 0.2rem) * 1)), 1.3rem);
   min-height: 0vw;
 }

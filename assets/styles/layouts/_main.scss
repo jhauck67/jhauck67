@@ -29,6 +29,8 @@ input[type="radio"] {
   transition: transform 0.3s ease;
 
   h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
     label {
       cursor: pointer;
       &::before {
@@ -51,17 +53,125 @@ input[type="radio"] {
     }
   }
   .folder-content {
+    //Accordeon settings
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
+    .screen {
+      padding: 10px 30px;
+      background: $black;
+      border: 1px solid $grey;
+      margin: 0 10px 10px;
+      .paragraph {
+        padding: 10px 0;
+        a {
+          color: $color;
+        }
+        ul li {
+          p {
+            display: inline-block;
+          }
+          a {
+            color: $color;
+            text-decoration: underline;
+          }
+        }
+      }
+      .markdown {
+        p,
+        a,
+        div {
+          font-family: $code;
+          font-weight: 300;
+          padding: 0;
+        }
+        a {
+          color: $color;
+          text-decoration: underline;
+        }
+        h3 {
+          padding-bottom: 10px;
+        }
+        .paragraph {
+          padding: 10px 0;
+          ul li {
+            p {
+              display: inline-block;
+            }
+            a {
+              color: $color;
+              text-decoration: underline;
+            }
+          }
+        }
+        .separator {
+          padding: 25px 0;
+          color: $white;
+        }
+        .status {
+          padding-top: 15px;
+          color: $grey;
+        }
+        background: $anthracite;
+        border: 1px solid $grey;
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+      }
+      form {
+        label {
+          display: block;
+          color: $white;
+          font-family: $text;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 250px;
+          font-family: $text;
+          color: $grey;
+        }
+        input[type="text"],
+        input[type="email"] {
+          height: 25px;
+        }
+        textarea {
+          height: 75px;
+          resize: none;
+        }
+        input[type="checkbox"] {
+          display: none;
+        }
+        #submit-button {
+          padding: 10px 25px;
+          margin: 10px 0;
+          background: $white;
+          border: 1px solid $grey;
+          color: $black;
+          display: block;
+          width: fit-content;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 input[type="radio"]:checked + .folder .folder-content {
-  max-height: 500px;
+  max-height: 1500px;
 }
 
 input[type="radio"]:checked + .folder h2 label::before {
   transform: rotate(90deg);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+.confirmation-message {
+  display: none;
+}
+input[type="checkbox"]:checked + label ~ .confirmation-message {
+  display: block;
 }
 
 //! Il faudra remettre l'animation d'entrée

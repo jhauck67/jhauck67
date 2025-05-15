@@ -88,7 +88,8 @@ p {
 /*                      Réglages size : fluid responsive                      */
 /* -------------------------------------------------------------------------- */
 p,
-p.code {
+p.code,
+label {
   font-size: clamp(0.75rem, 0.75rem + (1vw - 0.2rem) * 1, 1.3rem);
   min-height: 0vw;
 }
@@ -309,6 +310,10 @@ input[type=radio] {
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
+.folder h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
 .folder h2 label {
   cursor: pointer;
 }
@@ -338,14 +343,119 @@ input[type=radio] {
   -webkit-transition: max-height 0.5s;
   transition: max-height 0.5s;
 }
+.folder .folder-content .screen {
+  padding: 10px 30px;
+  background: #0d0d0d;
+  border: 1px solid #7f8c8d;
+  margin: 0 10px 10px;
+}
+.folder .folder-content .screen .paragraph {
+  padding: 10px 0;
+}
+.folder .folder-content .screen .paragraph a {
+  color: #39ff14;
+}
+.folder .folder-content .screen .paragraph ul li p {
+  display: inline-block;
+}
+.folder .folder-content .screen .paragraph ul li a {
+  color: #39ff14;
+  text-decoration: underline;
+}
+.folder .folder-content .screen .markdown {
+  background: #2d2d2d;
+  border: 1px solid #7f8c8d;
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
+}
+.folder .folder-content .screen .markdown p,
+.folder .folder-content .screen .markdown a,
+.folder .folder-content .screen .markdown div {
+  font-family: "JetBrain", monospace;
+  font-weight: 300;
+  padding: 0;
+}
+.folder .folder-content .screen .markdown a {
+  color: #39ff14;
+  text-decoration: underline;
+}
+.folder .folder-content .screen .markdown h3 {
+  padding-bottom: 10px;
+}
+.folder .folder-content .screen .markdown .paragraph {
+  padding: 10px 0;
+}
+.folder .folder-content .screen .markdown .paragraph ul li p {
+  display: inline-block;
+}
+.folder .folder-content .screen .markdown .paragraph ul li a {
+  color: #39ff14;
+  text-decoration: underline;
+}
+.folder .folder-content .screen .markdown .separator {
+  padding: 25px 0;
+  color: #ffffff;
+}
+.folder .folder-content .screen .markdown .status {
+  padding-top: 15px;
+  color: #7f8c8d;
+}
+.folder .folder-content .screen form label {
+  display: block;
+  color: #ffffff;
+  font-family: "IBM", sans-serif;
+}
+.folder .folder-content .screen form input[type=text],
+.folder .folder-content .screen form input[type=email],
+.folder .folder-content .screen form textarea {
+  width: 250px;
+  font-family: "IBM", sans-serif;
+  color: #7f8c8d;
+}
+.folder .folder-content .screen form input[type=text],
+.folder .folder-content .screen form input[type=email] {
+  height: 25px;
+}
+.folder .folder-content .screen form textarea {
+  height: 75px;
+  resize: none;
+}
+.folder .folder-content .screen form input[type=checkbox] {
+  display: none;
+}
+.folder .folder-content .screen form #submit-button {
+  padding: 10px 25px;
+  margin: 10px 0;
+  background: #ffffff;
+  border: 1px solid #7f8c8d;
+  color: #0d0d0d;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
 
 input[type=radio]:checked + .folder .folder-content {
-  max-height: 500px;
+  max-height: 1500px;
 }
 
 input[type=radio]:checked + .folder h2 label::before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.confirmation-message {
+  display: none;
+}
+
+input[type=checkbox]:checked + label ~ .confirmation-message {
+  display: block;
 }
 
 main {
