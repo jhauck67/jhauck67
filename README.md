@@ -163,19 +163,6 @@ _Description du SEO_
 
 - [ ] Modification de la section #blog et ajout d'un lien vers la page blog
 
-# Améliorations possibles :
-
-- [ ] Optimisation des éléments visuels :
-
-  - [ ] Amélioration 1
-  - [ ] Amélioration 2
-  - [ ] Amélioration 3
-
-- [ ] Modifications SEO friendly :
-  - [ ] Amélioration 1
-  - [ ] Amélioration 2
-  - [ ] Amélioration 3
-
 # Auteur :
 
 Jhauck67 (Développeuse web)

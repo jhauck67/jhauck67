@@ -1,0 +1,33 @@
+// ====== 🧹 [RESET] : Reset des réglages navigateurs ======
+
+// Reset de base
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Retrait des bullet points aux listes
+li {
+  list-style: none;
+}
+
+// Réinitialisation de la couleur de la police et retrait du soulignage
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Hérite de la police du parent, reset des bordures et du background
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

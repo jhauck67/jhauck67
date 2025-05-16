@@ -6,22 +6,13 @@ section#contact {
   padding: 0 20px;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   display: none;
 }
 .folder {
   background: $anthracite;
   border: 1px solid $grey;
-  clip-path: polygon(
-    100% 100%,
-    0% 100%,
-    0% 0%,
-    25% 0%,
-    30% 1.5em,
-    70% 1.5em,
-    75% 0%,
-    100% 0%
-  );
+  clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 25% 0%, 30% 1.5em, 70% 1.5em, 75% 0%, 100% 0%);
   padding: 10px;
   margin: 20px auto;
   width: 80%;
@@ -37,7 +28,7 @@ input[type="radio"] {
     label {
       cursor: pointer;
       &::before {
-        content: "\003E";
+        content: '\003E';
         display: inline-block;
         margin-right: 10px;
         transition: transform 0.3s ease;
@@ -127,27 +118,23 @@ input[type="radio"] {
           color: $white;
           font-family: $text;
         }
-        input[type="text"],
-        input[type="email"],
+        input[type='text'],
+        input[type='email'],
         textarea {
-          width: clamp(
-            130px,
-            calc(8.125rem + ((1vw - 3.2px) * 13.6364)),
-            250px
-          );
+          width: clamp(130px, calc(8.125rem + ((1vw - 3.2px) * 13.6364)), 250px);
           min-height: 0vw;
           font-family: $text;
           color: $grey;
         }
-        input[type="text"],
-        input[type="email"] {
+        input[type='text'],
+        input[type='email'] {
           height: 25px;
         }
         textarea {
           height: 75px;
           resize: none;
         }
-        input[type="checkbox"] {
+        input[type='checkbox'] {
           display: none;
         }
         #submit-button {
@@ -164,35 +151,35 @@ input[type="radio"] {
     }
   }
 }
-input[type="radio"]:checked + .folder .folder-content {
+input[type='radio']:checked + .folder .folder-content {
   max-height: 5000px;
 }
 
-input[type="radio"]:checked + .folder h2 label::before {
+input[type='radio']:checked + .folder h2 label::before {
   transform: rotate(90deg);
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   display: none;
 }
 .confirmation-message {
   display: none;
 }
-input[type="checkbox"]:checked + label ~ .confirmation-message {
+input[type='checkbox']:checked + label ~ .confirmation-message {
   display: block;
 }
 
 //! Il faudra remettre l'animation d'entrée
 // Animation d'entrée
-main {
-  opacity: 0;
-  animation: fadeInSoft 1s ease-out 7s forwards;
-}
-@keyframes fadeInSoft {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+// main {
+//   opacity: 0;
+//   animation: fadeInSoft 1s ease-out 7s forwards;
+// }
+// @keyframes fadeInSoft {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }

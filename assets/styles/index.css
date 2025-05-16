@@ -1,31 +1,31 @@
 @charset "UTF-8";
-/* ---------------------- Liens vers les pages à relier --------------------- */
-/* -------------------------------------------------------------------------- */
-/*                        Réglages de base et généraux                        */
-/* -------------------------------------------------------------------------- */
-/* ---------------------------- Import des fonts ---------------------------- */
-@font-face {
-  font-family: "Orbitron";
-  src: url(../fonts/Orbitron-VariableFont_wght.ttf);
-  font-display: swap;
-}
-@font-face {
-  font-family: "IBM";
-  src: url(../fonts/IBMPlexSans-VariableFont_wdthwght.ttf);
-  font-display: swap;
-}
-@font-face {
-  font-family: "JetBrain";
-  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
-  font-display: swap;
-}
-/* --------------------------- Variables et mixins -------------------------- */
-/* ---------------------------- Réglages généraux --------------------------- */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 body {
@@ -35,15 +35,10 @@ body {
   overflow-x: hidden;
 }
 
-li {
-  list-style: none;
-}
-
 a,
 a:visited {
-  color: #ffffff;
-  font-family: "IBM", sans-serif;
-  text-decoration: none;
+  color: #39ff14;
+  font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.3rem;
 }
 
@@ -63,27 +58,30 @@ h2 {
 
 p {
   color: #ffffff;
-  font-family: "IBM", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   padding: 5px 0;
 }
 
 .code {
   color: #ffffff;
-  font-family: "JetBrain", monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
-#cursor {
-  height: 20px;
-  width: 10px;
-  background: #ffffff;
+@font-face {
+  font-family: "Orbitron";
+  src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+  font-display: swap;
 }
-#cursor svg {
-  height: 28px;
-  width: auto;
-  -webkit-transform: translateX(10px);
-          transform: translateX(10px);
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url(../fonts/IBMPlexSans-VariableFont_wdth-wght.ttf);
+  font-display: swap;
 }
-
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
+  font-display: swap;
+}
 /* -------------------------------------------------------------------------- */
 /*                      Réglages size : fluid responsive                      */
 /* -------------------------------------------------------------------------- */
@@ -108,6 +106,7 @@ h2 {
 }
 
 .intro-animation {
+  display: none;
   position: absolute;
   width: 100%;
   z-index: 100;
@@ -143,7 +142,6 @@ h2 {
 }
 .intro-animation .intro-animation-container .intro-text-container .flex .dotted {
   width: clamp(75px, 4.6875rem + (1vw - 3.2px) * 31.25, 350px);
-  min-height: 0vw;
   height: clamp(0.75rem, 0.75rem + (1vw - 0.2rem) * 1, 1.3rem);
   min-height: 0vw;
   border-bottom: 2px dotted #ffffff;
@@ -196,40 +194,6 @@ h2 {
     opacity: 1;
   }
 }
-#cursor {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: clignoter;
-          animation-name: clignoter;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-transition: none;
-  transition: none;
-}
-
-@-webkit-keyframes clignoter {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes clignoter {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .intro-animation {
   -webkit-animation: hideIntro 1s ease-out 6s forwards;
           animation: hideIntro 1s ease-out 6s forwards;
@@ -252,7 +216,6 @@ h2 {
 header .header-text-container {
   width: 85%;
   max-width: 1200px;
-  margin: 0 auto;
   margin: 40px auto;
   padding: 20px;
 }
@@ -261,29 +224,6 @@ header .header-text-container h2 {
   padding: 30px 0;
 }
 
-header {
-  opacity: 0;
-  -webkit-animation: fadeInSoft 1s ease-out 6.5s forwards;
-          animation: fadeInSoft 1s ease-out 6.5s forwards;
-}
-
-@-webkit-keyframes fadeInSoft {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInSoft {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 section#whoami,
 section#projects,
 section#blog,
@@ -380,7 +320,7 @@ input[type=radio] {
 .folder .folder-content .screen .markdown p,
 .folder .folder-content .screen .markdown a,
 .folder .folder-content .screen .markdown div {
-  font-family: "JetBrain", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 300;
   padding: 0;
 }
@@ -412,14 +352,14 @@ input[type=radio] {
 .folder .folder-content .screen form label {
   display: block;
   color: #ffffff;
-  font-family: "IBM", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 .folder .folder-content .screen form input[type=text],
 .folder .folder-content .screen form input[type=email],
 .folder .folder-content .screen form textarea {
   width: clamp(130px, 8.125rem + (1vw - 3.2px) * 13.6364, 250px);
   min-height: 0vw;
-  font-family: "IBM", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   color: #7f8c8d;
 }
 .folder .folder-content .screen form input[type=text],
@@ -467,17 +407,46 @@ input[type=checkbox]:checked + label ~ .confirmation-message {
   display: block;
 }
 
-main {
-  opacity: 0;
-  -webkit-animation: fadeInSoft 1s ease-out 7s forwards;
-          animation: fadeInSoft 1s ease-out 7s forwards;
+#cursor {
+  height: 20px;
+  width: 10px;
+  background: #ffffff;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: clignoter;
+          animation-name: clignoter;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transition: none;
+  transition: none;
+}
+#cursor svg {
+  height: 28px;
+  width: auto;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 
-@keyframes fadeInSoft {
-  from {
+@-webkit-keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  50% {
     opacity: 0;
   }
-  to {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }/*# sourceMappingURL=index.css.map */

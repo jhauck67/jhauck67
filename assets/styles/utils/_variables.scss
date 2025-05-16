@@ -1,0 +1,19 @@
+// ====== 🧬 [VARIABLES] : Variables fonts et couleurs... ======
+
+// 🔠 Typographie :
+$titre: 'Orbitron', fantasy;
+$text: 'IBM Plex Sans', sans-serif;
+$code: 'JetBrains Mono', monospace;
+
+// 🎨 Palette des couleurs :
+$black: #0d0d0d;
+$anthracite: #2d2d2d;
+$grey: #7f8c8d;
+$white: #ffffff;
+$color: #39ff14;
+
+// 📏 Définition des breakpoints
+$breakpoints: (
+  mobile: 480px,
+  tablette: 770px
+);

@@ -1,31 +1,30 @@
+// ====== ✨ [INTRO ANIMATION] : Animation d’apparition du texte + curseur ======
+
 .intro-animation {
-  // ! à enlever
-  // display: none;
+  // TODO Enlever cette ligne quand le dev sera terminé !
+  display: none;
   position: absolute;
   width: 100%;
   z-index: 100;
   background: $black;
+
   .intro-animation-container {
     height: 100dvh;
     @include centerChild;
     @include maxWidth;
+
     .intro-text-container {
       width: 100%;
-      // Responsive fluid value
-      margin-left: clamp(
-        1px,
-        calc(0.0625rem + ((1vw - 3.2px) * 28.2955)),
-        250px
-      );
+      // FIXME Margin-left pas ouf !!!
+      margin-left: clamp(1px, calc(0.0625rem + ((1vw - 3.2px) * 28.2955)), 250px);
       min-height: 0vw;
+
       .flex {
         display: flex;
         align-items: center;
+
         .dotted {
-          // Responsive fluid value
           width: clamp(75px, calc(4.6875rem + ((1vw - 3.2px) * 31.25)), 350px);
-          min-height: 0vw;
-          // Responsive fluid value
           height: clamp(0.75rem, calc(0.75rem + ((1vw - 0.2rem) * 1)), 1.3rem);
           min-height: 0vw;
           border-bottom: 2px dotted $white;
@@ -64,25 +63,6 @@
 
 @keyframes fadeIn {
   to {
-    opacity: 1;
-  }
-}
-
-// Clignotement du curseur
-#cursor {
-  animation-duration: 1s;
-  animation-name: clignoter;
-  animation-iteration-count: infinite;
-  transition: none;
-}
-@keyframes clignoter {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
     opacity: 1;
   }
 }

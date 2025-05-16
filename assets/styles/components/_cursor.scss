@@ -1,0 +1,31 @@
+// ====== 🧩 [CURSOR] : Curseur avec un petit train ======
+
+#cursor {
+  height: 20px;
+  width: 10px;
+  background: $white;
+  animation-duration: 1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+
+  // Petit train
+  svg {
+    height: 28px;
+    width: auto;
+    transform: translateX(10px);
+  }
+}
+
+// Animation pour faire clignoter le petit train
+@keyframes clignoter {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

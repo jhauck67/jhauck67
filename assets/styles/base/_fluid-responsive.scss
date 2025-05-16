@@ -1,0 +1,24 @@
+/* -------------------------------------------------------------------------- */
+/*                      Réglages size : fluid responsive                      */
+/* -------------------------------------------------------------------------- */
+// 1 de 1200px à 320px
+// Passage de 1.3rem à 0.75rem
+p,
+p.code,
+label,
+#submit-button,
+a,
+h3 {
+  font-size: clamp(0.75rem, calc(0.75rem + ((1vw - 0.2rem) * 1)), 1.3rem);
+  min-height: 0vw;
+}
+// Passage de 3rem à 1.7rem
+h1 {
+  font-size: clamp(1.7rem, calc(1.7rem + ((1vw - 0.2rem) * 2.3636)), 3rem);
+  min-height: 0vw;
+}
+// Passage de 2rem à 1.1rem
+h2 {
+  font-size: clamp(1.1rem, calc(1.1rem + ((1vw - 0.2rem) * 1.6364)), 2rem);
+  min-height: 0vw;
+}
