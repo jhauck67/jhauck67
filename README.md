@@ -6,7 +6,7 @@
 ![Lighthouse](https://img.shields.io/badge/Lighthouse-white?style=for-the-badge&logo=lighthouse)
 ![Performances](https://img.shields.io/badge/Performances-91-brightgreen) ![Accessibilité](https://img.shields.io/badge/Accessibilit%C3%A9-100-brightgreen) ![Bonnes Pratiques](https://img.shields.io/badge/Bonnes_pratiques-100-brightgreen) ![SEO](https://img.shields.io/badge/SEO-100-brightgreen)
 \
-![Aperçu du projet](3-Projets/En%20développement/Projet-Le-Resto/assets/sketch/apercu.png)
+![Aperçu du projet](assets/sketch/apercu.png)
 
 # Description
 
