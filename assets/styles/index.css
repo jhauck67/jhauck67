@@ -90,26 +90,40 @@ p {
   src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
   font-display: swap;
 }
-/* -------------------------------------------------------------------------- */
-/*                      Réglages size : fluid responsive                      */
-/* -------------------------------------------------------------------------- */
-p,
-p.code,
-label,
-#submit-button,
-a,
-h3 {
+.intro-animation p.code {
   font-size: clamp(0.75rem, 0.75rem + (1vw - 0.2rem) * 1, 1.3rem);
   min-height: 0vw;
 }
 
-h1 {
+header h1 {
   font-size: clamp(1.7rem, 1.7rem + (1vw - 0.2rem) * 2.3636, 3rem);
   min-height: 0vw;
 }
-
-h2 {
+header h2 {
   font-size: clamp(1.1rem, 1.1rem + (1vw - 0.2rem) * 1.6364, 2rem);
+  min-height: 0vw;
+}
+header p {
+  font-size: clamp(0.75rem, 0.75rem + (1vw - 0.2rem) * 1, 1.3rem);
+  min-height: 0vw;
+}
+
+.folder h2 label {
+  font-size: clamp(1rem, 1rem + (1vw - 0.2rem) * 0.7143, 1.5rem);
+  min-height: 0vw;
+}
+.folder h3 a {
+  font-size: clamp(1rem, 1rem + (1vw - 0.2rem) * 0.7143, 1.5rem);
+  min-height: 0vw;
+}
+.folder p,
+.folder li,
+.folder a {
+  font-size: clamp(0.75rem, 0.75rem + (1vw - 0.2rem) * 1, 1.3rem);
+  min-height: 0vw;
+}
+.folder p.code {
+  font-size: clamp(0.7rem, 0.7rem + (1vw - 0.2rem) * 0.7143, 1.2rem);
   min-height: 0vw;
 }
 
@@ -238,12 +252,19 @@ h2 {
 header .header-text-container {
   width: 85%;
   max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 0 auto;
+  margin: clamp(20px, 1.25rem + (1vw - 3.2px) * 1.7857, 30px) auto;
+  padding: clamp(20px, 1.25rem + (1vw - 3.2px) * 1.7857, 40px);
+}
+@media (max-width: 1024px) {
+  header .header-text-container {
+    width: 100%;
+    margin: clamp(5px, 0.3125rem + (1vw - 3.2px) * 2.2321, 30px) 0;
+  }
 }
 header .header-text-container h2 {
   color: #ffffff;
-  padding: 30px 0;
+  padding: clamp(20px, 1.25rem + (1vw - 3.2px) * 0.8929, 30px) 0;
 }
 
 header {
@@ -276,7 +297,17 @@ section#contact {
   width: 85%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  margin: clamp(20px, 1.25rem + (1vw - 3.2px) * 1.7857, 30px) auto;
+  padding: 0 clamp(20px, 1.25rem + (1vw - 3.2px) * 1.7857, 40px);
+}
+@media (max-width: 1024px) {
+  section#whoami,
+  section#projects,
+  section#blog,
+  section#contact {
+    width: 100%;
+    margin: clamp(5px, 0.3125rem + (1vw - 3.2px) * 2.2321, 30px) 0;
+  }
 }
 
 .folder {
@@ -284,9 +315,10 @@ section#contact {
   border: 1px solid #7f8c8d;
   -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 25% 0%, 30% 1.5em, 70% 1.5em, 75% 0%, 100% 0%);
           clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 25% 0%, 30% 1.5em, 70% 1.5em, 75% 0%, 100% 0%);
-  padding: 10px;
-  margin: 20px auto;
-  width: 80%;
+  padding: 15px 10px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 900px;
   -webkit-box-shadow: 0 4px 8px rgba(57, 255, 20, 0.15);
           box-shadow: 0 4px 8px rgba(57, 255, 20, 0.15);
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -294,18 +326,12 @@ section#contact {
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-@media screen and (max-width: 770px) {
-  .folder {
-    width: 100%;
-  }
-}
 .folder:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
 .folder h2 {
-  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 .folder h2 label {
@@ -333,10 +359,9 @@ section#contact {
 }
 
 .folder-content .screen {
-  padding: 10px 30px;
+  padding: 15px;
   background: #0d0d0d;
   border: 1px solid #7f8c8d;
-  margin: 0 10px 10px;
 }
 .folder-content .screen .paragraph {
   padding: 10px 0;
@@ -354,9 +379,8 @@ section#contact {
 .folder-content .screen .markdown {
   background: #2d2d2d;
   border: 1px solid #7f8c8d;
-  width: 95%;
   margin: 10px auto;
-  padding: 10px;
+  padding: 10px 15px;
 }
 .folder-content .screen .markdown p,
 .folder-content .screen .markdown a,
@@ -376,14 +400,15 @@ section#contact {
   padding: 10px 0;
 }
 .folder-content .screen .markdown .paragraph ul li p {
-  display: inline-block;
+  display: contents;
 }
 .folder-content .screen .markdown .paragraph ul li a {
   color: #39ff14;
   text-decoration: underline;
 }
 .folder-content .screen .markdown .separator {
-  padding: 25px 0;
+  padding: clamp(1px, 0.0625rem + (1vw - 3.2px) * 1.6964, 20px) 0;
+  min-height: 0vw;
   color: #ffffff;
 }
 .folder-content .screen .markdown .status {

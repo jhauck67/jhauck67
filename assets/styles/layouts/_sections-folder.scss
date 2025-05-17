@@ -8,7 +8,13 @@ section#projects,
 section#blog,
 section#contact {
   @include maxWidth;
-  padding: 0 20px;
+  margin: clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.7857)), 30px) auto;
+  // à 1024px, 100% mais une margin fluid responsive
+  @include respond(desktop) {
+    width: 100%;
+    margin: clamp(5px, calc(0.3125rem + ((1vw - 3.2px) * 2.2321)), 30px) 0;
+  }
+  padding: 0 clamp(20px, calc(1.25rem + ((1vw - 3.2px) * 1.7857)), 40px);
 }
 
 // ========================================
@@ -18,12 +24,10 @@ section#contact {
   background: $anthracite;
   border: 1px solid $grey;
   clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 25% 0%, 30% 1.5em, 70% 1.5em, 75% 0%, 100% 0%);
-  padding: 10px;
-  margin: 20px auto;
-  width: 80%;
-  @media screen and (max-width: 770px) {
-    width: 100%;
-  }
+  padding: 15px 10px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 900px;
   &:hover {
     transform: translateY(-5px);
   }
@@ -35,7 +39,6 @@ section#contact {
 // 🧷 HEADER du folder (h2 + label)
 // ========================================
 .folder h2 {
-  font-size: 1.5rem;
   margin-bottom: 20px;
   label {
     cursor: pointer;
@@ -66,10 +69,9 @@ section#contact {
 // ========================================
 .folder-content {
   .screen {
-    padding: 10px 30px;
+    padding: 15px;
     background: $black;
     border: 1px solid $grey;
-    margin: 0 10px 10px;
 
     // ✍️ Paragraphe classique
     .paragraph {
@@ -94,9 +96,8 @@ section#contact {
     .markdown {
       background: $anthracite;
       border: 1px solid $grey;
-      width: 95%;
       margin: 10px auto;
-      padding: 10px;
+      padding: 10px 15px;
 
       p,
       a,
@@ -119,7 +120,7 @@ section#contact {
         padding: 10px 0;
         ul li {
           p {
-            display: inline-block;
+            display: contents;
           }
           a {
             color: $color;
@@ -129,7 +130,9 @@ section#contact {
       }
 
       .separator {
-        padding: 25px 0;
+        // Padding Fluid-Responsive
+        padding: clamp(1px, calc(0.0625rem + ((1vw - 3.2px) * 1.6964)), 20px) 0;
+        min-height: 0vw;
         color: $white;
       }
 
