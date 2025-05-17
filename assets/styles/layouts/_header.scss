@@ -1,3 +1,6 @@
+// ====== 🚦 [HEADER] : Conteneur principal de l’en-tête & styles associés ======
+
+// Styles du header
 header {
   .header-text-container {
     @include maxWidth(40px);
@@ -9,7 +12,7 @@ header {
   }
 }
 
-// TODO Il faudra réactiver le code suivant à la fin du développement
+// TEMP Il faudra réactiver le code suivant à la fin du développement
 // Animation d'entrée
 // header {
 //   opacity: 0;

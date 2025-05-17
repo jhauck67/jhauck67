@@ -1,0 +1,60 @@
+// ====== 📮 [FORM] : Style du formulaire de contact ======
+
+// ========================================
+// 🏷️ Formulaire principal
+// ========================================
+form {
+  //   🎫 Labels
+  label {
+    display: block;
+    color: $white;
+    font-family: $text;
+  }
+
+  // ✏️ Champs texte & textarea
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    width: clamp(130px, calc(8.125rem + ((1vw - 3.2px) * 13.6364)), 250px);
+    min-height: 0vw;
+    font-family: $text;
+    color: $grey;
+    border: 1px solid $grey;
+  }
+  // 📏 Hauteurs fixes
+  input[type='text'],
+  input[type='email'] {
+    height: 25px;
+  }
+  textarea {
+    height: 75px;
+    resize: none;
+  }
+}
+
+// ========================================
+// ✅ Bouton d'envoi
+// ========================================
+#submit-button {
+  padding: 5px 10px;
+  margin: 10px 0;
+  background: $white;
+  border: 1px solid $grey;
+  color: $black;
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+}
+
+// ========================================
+// 🪄 HACK : Affichage du message de confirmation
+// ========================================
+input[type='checkbox'] {
+  display: none;
+}
+.confirmation-message {
+  display: none;
+}
+input[type='checkbox']:checked + label ~ .confirmation-message {
+  display: block;
+}

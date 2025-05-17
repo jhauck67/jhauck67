@@ -1,0 +1,142 @@
+// ====== 📚 [SECTIONS + FOLDERS] : Styles des sections principales et dossiers accordéon ======
+
+// ========================================
+// 🗂️ Layout général des SECTIONS
+// ========================================
+section#whoami,
+section#projects,
+section#blog,
+section#contact {
+  @include maxWidth;
+  padding: 0 20px;
+}
+
+// ========================================
+// 📁 Style général du FOLDER
+// ========================================
+.folder {
+  background: $anthracite;
+  border: 1px solid $grey;
+  clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 25% 0%, 30% 1.5em, 70% 1.5em, 75% 0%, 100% 0%);
+  padding: 10px;
+  margin: 20px auto;
+  width: 80%;
+  @media screen and (max-width: 770px) {
+    width: 100%;
+  }
+  &:hover {
+    transform: translateY(-5px);
+  }
+  box-shadow: 0 4px 8px rgba(57, 255, 20, 0.15);
+  transition: transform 0.3s ease;
+}
+
+// ========================================
+// 🧷 HEADER du folder (h2 + label)
+// ========================================
+.folder h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  label {
+    cursor: pointer;
+    &::before {
+      content: '\003E';
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  // 🔒 Accessibilité : screen-reader only
+  .sr-only {
+    margin-bottom: 10px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+// ========================================
+// 🖥️ FOLDER-CONTENT : Contenu principal du dossier
+// ========================================
+.folder-content {
+  .screen {
+    padding: 10px 30px;
+    background: $black;
+    border: 1px solid $grey;
+    margin: 0 10px 10px;
+
+    // ✍️ Paragraphe classique
+    .paragraph {
+      padding: 10px 0;
+      a {
+        color: $color;
+      }
+      ul li {
+        p {
+          display: inline-block;
+        }
+        a {
+          color: $color;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // ========================================
+    // 📄 MARKDOWN (blocs code et contenu brut)
+    // ========================================
+    .markdown {
+      background: $anthracite;
+      border: 1px solid $grey;
+      width: 95%;
+      margin: 10px auto;
+      padding: 10px;
+
+      p,
+      a,
+      div {
+        font-family: $code;
+        font-weight: 300;
+        padding: 0;
+      }
+
+      a {
+        color: $color;
+        text-decoration: underline;
+      }
+
+      h3 {
+        padding-bottom: 10px;
+      }
+
+      .paragraph {
+        padding: 10px 0;
+        ul li {
+          p {
+            display: inline-block;
+          }
+          a {
+            color: $color;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .separator {
+        padding: 25px 0;
+        color: $white;
+      }
+
+      .status {
+        padding-top: 15px;
+        color: $grey;
+      }
+    }
+  }
+}

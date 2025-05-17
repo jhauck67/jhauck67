@@ -31,3 +31,15 @@ textarea {
   background: none;
   cursor: pointer;
 }
+
+// Reset du focus natif (pas recommandé sans remplacement)
+:focus {
+  outline: none;
+}
+
+// Focus custom accessible
+:focus-visible {
+  outline: 2px solid $color; // ta couleur néon personnalisée
+  outline-offset: 3px;
+  transition: outline 0.3s ease;
+}

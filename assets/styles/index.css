@@ -28,6 +28,17 @@ textarea {
   cursor: pointer;
 }
 
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #39ff14;
+  outline-offset: 3px;
+  -webkit-transition: outline 0.3s ease;
+  transition: outline 0.3s ease;
+}
+
 body {
   width: 100dvw;
   min-height: 100dvh;
@@ -234,10 +245,6 @@ section#contact {
   padding: 0 20px;
 }
 
-input[type=radio] {
-  display: none;
-}
-
 .folder {
   background: #2d2d2d;
   border: 1px solid #7f8c8d;
@@ -258,6 +265,11 @@ input[type=radio] {
     width: 100%;
   }
 }
+.folder:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
 .folder h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
@@ -285,95 +297,110 @@ input[type=radio] {
   white-space: nowrap;
   border: 0;
 }
-.folder .folder-content {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.5s;
-  transition: max-height 0.5s;
-}
-.folder .folder-content .screen {
+
+.folder-content .screen {
   padding: 10px 30px;
   background: #0d0d0d;
   border: 1px solid #7f8c8d;
   margin: 0 10px 10px;
 }
-.folder .folder-content .screen .paragraph {
+.folder-content .screen .paragraph {
   padding: 10px 0;
 }
-.folder .folder-content .screen .paragraph a {
+.folder-content .screen .paragraph a {
   color: #39ff14;
 }
-.folder .folder-content .screen .paragraph ul li p {
+.folder-content .screen .paragraph ul li p {
   display: inline-block;
 }
-.folder .folder-content .screen .paragraph ul li a {
+.folder-content .screen .paragraph ul li a {
   color: #39ff14;
   text-decoration: underline;
 }
-.folder .folder-content .screen .markdown {
+.folder-content .screen .markdown {
   background: #2d2d2d;
   border: 1px solid #7f8c8d;
   width: 95%;
   margin: 10px auto;
   padding: 10px;
 }
-.folder .folder-content .screen .markdown p,
-.folder .folder-content .screen .markdown a,
-.folder .folder-content .screen .markdown div {
+.folder-content .screen .markdown p,
+.folder-content .screen .markdown a,
+.folder-content .screen .markdown div {
   font-family: "JetBrains Mono", monospace;
   font-weight: 300;
   padding: 0;
 }
-.folder .folder-content .screen .markdown a {
+.folder-content .screen .markdown a {
   color: #39ff14;
   text-decoration: underline;
 }
-.folder .folder-content .screen .markdown h3 {
+.folder-content .screen .markdown h3 {
   padding-bottom: 10px;
 }
-.folder .folder-content .screen .markdown .paragraph {
+.folder-content .screen .markdown .paragraph {
   padding: 10px 0;
 }
-.folder .folder-content .screen .markdown .paragraph ul li p {
+.folder-content .screen .markdown .paragraph ul li p {
   display: inline-block;
 }
-.folder .folder-content .screen .markdown .paragraph ul li a {
+.folder-content .screen .markdown .paragraph ul li a {
   color: #39ff14;
   text-decoration: underline;
 }
-.folder .folder-content .screen .markdown .separator {
+.folder-content .screen .markdown .separator {
   padding: 25px 0;
   color: #ffffff;
 }
-.folder .folder-content .screen .markdown .status {
+.folder-content .screen .markdown .status {
   padding-top: 15px;
   color: #7f8c8d;
 }
-.folder .folder-content .screen form label {
+
+input[type=radio] {
+  display: none;
+}
+
+.folder-content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+
+input[type=radio]:checked + .folder .folder-content {
+  max-height: 5000px;
+}
+
+input[type=radio]:checked + .folder h2 label::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+form label {
   display: block;
   color: #ffffff;
   font-family: "IBM Plex Sans", sans-serif;
 }
-.folder .folder-content .screen form input[type=text],
-.folder .folder-content .screen form input[type=email],
-.folder .folder-content .screen form textarea {
+form input[type=text],
+form input[type=email],
+form textarea {
   width: clamp(130px, 8.125rem + (1vw - 3.2px) * 13.6364, 250px);
   min-height: 0vw;
   font-family: "IBM Plex Sans", sans-serif;
   color: #7f8c8d;
+  border: 1px solid #7f8c8d;
 }
-.folder .folder-content .screen form input[type=text],
-.folder .folder-content .screen form input[type=email] {
+form input[type=text],
+form input[type=email] {
   height: 25px;
 }
-.folder .folder-content .screen form textarea {
+form textarea {
   height: 75px;
   resize: none;
 }
-.folder .folder-content .screen form input[type=checkbox] {
-  display: none;
-}
-.folder .folder-content .screen form #submit-button {
+
+#submit-button {
   padding: 5px 10px;
   margin: 10px 0;
   background: #ffffff;
@@ -384,15 +411,6 @@ input[type=radio] {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-}
-
-input[type=radio]:checked + .folder .folder-content {
-  max-height: 5000px;
-}
-
-input[type=radio]:checked + .folder h2 label::before {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
 }
 
 input[type=checkbox] {

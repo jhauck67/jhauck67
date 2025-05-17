@@ -1,6 +1,10 @@
 /* -------------------------------------------------------------------------- */
 /*                      Réglages size : fluid responsive                      */
 /* -------------------------------------------------------------------------- */
+
+// IDEA: Passer à un mixin @include fluid-type($min, $max, $scale)
+// pour rendre le fichier plus maintenable et lisible.
+
 // 1 de 1200px à 320px
 // Passage de 1.3rem à 0.75rem
 p,
