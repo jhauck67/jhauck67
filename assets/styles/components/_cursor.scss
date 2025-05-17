@@ -1,8 +1,11 @@
 // ====== 🧩 [CURSOR] : Curseur avec un petit train ======
 
 #cursor {
-  height: 20px;
-  width: 10px;
+  // 📏 Width et Height responsive !!!
+  height: clamp(15px, calc(0.9375rem + ((1vw - 3.2px) * 0.4464)), 20px);
+  width: clamp(7.5px, calc(0.46875rem + ((1vw - 3.2px) * 0.2232)), 10px);
+  min-height: 0vw;
+
   background: $white;
   animation-duration: 1s;
   animation-name: clignoter;
@@ -11,7 +14,9 @@
 
   // Petit train
   svg {
-    height: 28px;
+    // 📏 Width et Height responsive !!!
+    height: clamp(21px, calc(1.3125rem + ((1vw - 3.2px) * 0.625)), 28px);
+    min-height: 0vw;
     width: auto;
     transform: translateX(10px);
   }
