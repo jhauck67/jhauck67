@@ -13,7 +13,6 @@ a,
 a:visited {
   color: $color;
   font-family: $text;
-  font-size: 1.3rem; //FIXME Attention à la font-size
 }
 
 // Paramétrage du texte : Titres (H1, H2, H3) et paragraphes
@@ -21,13 +20,11 @@ h1 {
   color: $color;
   font-family: $titre;
   font-weight: 800;
-  font-size: 3rem; //FIXME Attention à la font-size
 }
 h2 {
   color: $color;
   font-family: $titre;
   font-weight: 700;
-  font-size: 2rem; //FIXME Attention à la font-size
 }
 p {
   color: $white;

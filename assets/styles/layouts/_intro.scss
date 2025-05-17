@@ -2,7 +2,7 @@
 
 .intro-animation {
   // TEMP Enlever cette ligne quand le dev sera terminé !
-  display: none;
+  // display: none;
   position: absolute;
   width: 100%;
   z-index: 100;
@@ -15,9 +15,23 @@
 
     .intro-text-container {
       width: 100%;
-      // FIXME Margin-left pas ouf !!!
-      margin-left: clamp(1px, calc(0.0625rem + ((1vw - 3.2px) * 28.2955)), 250px);
+
+      // 📏 Margin-left responsive !!!
+      // desktop+ > 1024px
+      margin-left: clamp(150px, calc(9.375rem + ((1vw - 10.24px) * 19.2308)), 230px);
       min-height: 0vw;
+      // 770px < desktop < 1024px
+      @include respond(desktop) {
+        margin-left: clamp(100px, calc(6.25rem + ((1vw - 7.7px) * 19.685)), 150px);
+      }
+      // 480px < tablet < 770px
+      @include respond(tablet) {
+        margin-left: clamp(40px, calc(2.5rem + ((1vw - 4.8px) * 20.6897)), 100px);
+      }
+      // mobile < 480px
+      @include respond(mobile) {
+        margin-left: clamp(10px, calc(0.625rem + ((1vw - 3.2px) * 18.75)), 40px);
+      }
 
       .flex {
         display: flex;
