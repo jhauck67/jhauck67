@@ -1,0 +1,42 @@
+/* ----------MISE EN PAGE DE L'INTRO---------- */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introText-container {
+  padding: 10px;
+}
+
+/* ----------ANIMATIONS---------- */
+
+/* Création d'un curseur + Animation curseur */
+.active::after {
+  content: '_';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Effet de fondu */
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

@@ -1,0 +1,120 @@
+/* *----------FONTS----------* */
+@font-face {
+  font-family: 'Orbitron';
+  src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url(../fonts/IBMPlexSans-VariableFont_wdth-wght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
+  font-display: swap;
+}
+
+/* *----------PARAMETRES GENERAUX----------* */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  background: #0d0d0d;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited,
+.link {
+  text-decoration: none;
+  color: #39ff14;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.titre {
+  font-family: 'Orbitron', fantasy;
+}
+
+h1 {
+  color: #39ff14;
+  font-weight: 800;
+}
+
+h2 {
+  color: #ffffff;
+  font-weight: 700;
+  padding: clamp(20px, 1.25rem + (1vw - 3.2px) * 0.8929, 30px) 0;
+}
+
+p {
+  color: #ffffff;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 5px 0;
+}
+
+.code {
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* *----------STYLE DU HEADER----------* */
+.desktop {
+  height: 100%;
+}
+
+.header-text-container,
+.desktop-icons-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(20px, 1.25rem + (1vw - 3.2px) * 1.7857, 40px);
+}
+
+@media (max-width: 1024px) {
+  .header-text-container,
+  .desktop-icons-container {
+    width: 100%;
+  }
+}
+
+#replay {
+  display: inline-block;
+}
+#replay:hover {
+  transform: scale(1.1);
+}
+
+.desktop-icons-container {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 60px;
+  margin-top: 0;
+}
+
+.desktop-icons-container > div {
+  cursor: pointer;
+}
+.desktop-icons-container > div:hover {
+  transform: scale(1.05);
+}
+.desktop-icons-container > div:hover img {
+  box-shadow: 0 0 5px #39ff14;
+}
+.desktop-icons-container img {
+  width: 60px;
+}

@@ -1,0 +1,197 @@
+/* *****MISE EN PAGE DE POPUP WINDOW***** */
+/* Sert à centrer la fenêtre popup par rappot au desktop */
+.desktop {
+  position: relative;
+}
+
+/* Diminue l'opacité et floute le desktop */
+.header-text-container,
+.desktop-icons-container {
+  opacity: 0.5;
+  filter: blur(5px);
+}
+
+/* Squelette de la fenêtre popup */
+.popup-window {
+  width: clamp(650px, 70%, 900px);
+  height: auto;
+  aspect-ratio: 16/10;
+  z-index: 100;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px #39ff14b3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 10% 90%;
+  grid-template-areas:
+    'sb he'
+    'sb co';
+}
+
+/* -- Elements communs -- */
+/* Barre de séparation -- */
+.popup-window .separator {
+  height: 1px;
+  width: 100px;
+  margin: 10px 5px;
+}
+.popup-sidebar .separator {
+  background-color: #37ff14af;
+}
+.popup-content .separator {
+  background-color: #258a13af;
+}
+/* Style légende de texte */
+.popup-content .status {
+  font-style: italic;
+}
+
+/* Style de la barre de titre */
+.popup-header {
+  grid-area: he;
+  background: #252525;
+  padding: 0 8px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popup-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+#burger {
+  display: none;
+}
+.close-button {
+  cursor: pointer;
+}
+.close-button:hover {
+  transform: scale(1.05);
+}
+
+/* Style de la sidebar */
+.popup-sidebar {
+  grid-area: sb;
+  background: #2e2e2e;
+  border-radius: 20px 0 0 20px;
+}
+.sidebar-container {
+  padding: 10px;
+}
+.sidebar-container ul li {
+  cursor: pointer;
+}
+.sidebar-container ul li:hover,
+.sidebar-container ul li:hover a {
+  transform: scale(1.05);
+  background: #bcffb0f3;
+  color: #2e2e2e;
+  font-weight: bold;
+}
+
+/*Style du contenu */
+.popup-content {
+  grid-area: co;
+  background: #dbdbdb;
+  border-bottom-right-radius: 20px;
+  overflow-y: auto;
+}
+.content-container {
+  padding: 10px;
+}
+.content-container .paragraph {
+  padding-bottom: 10px;
+}
+.popup-content p {
+  color: black;
+  padding: 0;
+}
+.popup-content a {
+  color: #1f7110;
+  display: inline-block;
+}
+.popup-content a:hover {
+  font-weight: bold;
+  color: #2a9716;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 700px) {
+  .popup-window {
+    width: 95%;
+    height: 95%;
+    display: block;
+  }
+  .popup-header {
+    border-top-left-radius: 20px;
+    padding-bottom: 10px;
+    height: 60px;
+  }
+  .popup-title {
+    font-size: 0.75rem;
+  }
+  #burger {
+    display: inline;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .popup-content {
+    height: calc(100% - 60px);
+    border-bottom-left-radius: 20px;
+  }
+  .popup-sidebar {
+    transform: translate(-200px, -60px);
+    transition: 0.3s ease;
+    position: absolute;
+  }
+  .active {
+    transform: translate(0, -60px);
+    height: 100%;
+    z-index: 150;
+    width: 200px;
+  }
+}
+
+/* Style du formulaire de contact */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 5px;
+  gap: 10px;
+}
+form > div {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+form label {
+  font-family: 'IBM Plex Sans';
+}
+input,
+textarea {
+  background: transparent;
+  border: 1px solid #2e2e2e;
+  border-radius: 5px;
+  font-family: 'IBM Plex Sans';
+  resize: none;
+}
+textarea {
+  height: 70px;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #1f7110;
+  box-shadow: 0 0 5px #1f7110;
+}
+input[type='submit'] {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #1f7110;
+  color: white;
+}

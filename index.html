@@ -12,7 +12,7 @@
     <!-- Meta Description -->
     <meta
       name="description"
-      content="Bienvenue dans le système Jennifer-OS. Ce terminal créatif répertorie mes projets web, expériences front-end et notes de bord techniques. HTML/CSS only (pour l’instant)."
+      content="Bienvenue dans le système Jennifer-OS. Ce terminal créatif répertorie mes projets web, expériences front-end et notes de bord techniques."
     />
     <!-- favicon.ico -->
     <link rel="icon" type="image/x-icon" href="./assets/img/icons/favicon.ico" />
@@ -55,81 +55,30 @@
 
     <!-- ====== 🎨 [FEUILLE DE STYLE CSS] ====== -->
     <!-- Précharger la feuille de style css -->
-    <link rel="preload" href="./assets/styles/index.css" as="style" />
+    <link rel="preload" href="./assets/styles/style.css" as="style" />
+    <link rel="preload" href="./assets/styles/intro.css" as="style" />
     <!-- Lien vers la feuille de style css -->
-    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/intro.css" />
   </head>
-
-  <!-- ===== 📄 [BODY] : Début du site ====== -->
   <body>
-    <!-- 🎞️ [PAGE D'INTRODUCTION] avec animation -->
-    <div class="intro-animation">
-      <div class="intro-animation-container">
-        <!-- Lignes de code qui s'affichent -->
-        <div class="intro-text-container">
-          <div class="first flex">
-            <p class="code">[Initializing hardware</p>
-            <div class="dotted code"></div>
-            <p class="code">OK]</p>
-          </div>
-          <div class="second flex">
-            <p class="code">[Loading kernel</p>
-            <div class="dotted code"></div>
-            <p class="code">OK]</p>
-          </div>
-          <div class="third flex">
-            <p class="code">[Starting services</p>
-            <div class="dotted code"></div>
-            <p class="code">OK]</p>
-          </div>
-          <div class="fourth flex">
-            <p class="code">[Mounting filesystems</p>
-            <div class="dotted code"></div>
-            <p class="code">OK]</p>
-          </div>
-          <p class="code fifth">[Welcome to JENNIFER-OS v1.0.0]</p>
-          <!-- Curseur avec un train en SVG -->
-          <div id="cursor" class="sixth">
-            <svg
-              role="img"
-              aria-label="Curseur de démarrage, train stylisé"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#0d0d0d"
-              stroke="#ffffff"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <g id="train" transform="translate(-2 -5)">
-                  <path
-                    id="secondary"
-                    fill="#39ff14"
-                    d="M13,14a1,1,0,0,1-1-1V10H4a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1,7,7,0,0,0-.68-3Z"
-                  ></path>
-                  <path
-                    id="primary"
-                    d="M7,14H8m2-8h6M12,6v4m9,7h0a7,7,0,0,0-7-7H4a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1H20A1,1,0,0,0,21,17Zm-7-7H12v3a1,1,0,0,0,1,1h7.32A7,7,0,0,0,14,10Z"
-                    fill="none"
-                    stroke="#39ff14000000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  ></path>
-                </g>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 🧱 [HEADER] -->
-    <header>
+    <!-- ******🧱 [HEADER] ***** -->
+    <header class="desktop">
+      <!-- Text dans le header -->
       <div class="header-text-container">
-        <h1>Bienvenue sur mon terminal perso</h1>
-        <h2>Une interface un peu geek pour coder, apprendre et partager</h2>
+        <h1 class="titre">
+          <img
+            src="./assets/img/icons/arrow.svg"
+            alt="Rejouer l'intro"
+            aria-label="Rejouer l'intro"
+            width="20"
+            height="20"
+            id="replay"
+            title="Relancer l'intro"
+          />
+          Bienvenue sur mon terminal perso
+        </h1>
+        <h2 class="titre">Une interface un peu geek pour coder, apprendre et partager</h2>
         <p>
           Je m'appelle Jennifer, je suis conductrice de train et j'apprends le développement web sur
           mon temps libre.
@@ -137,379 +86,53 @@
         <p>Tu peux explorer les sections ci-dessous en cliquant sur les dossiers.</p>
         <p>Chaque commande t'ouvre un nouvel onglet de mon univers.</p>
       </div>
+      <!-- ----- -->
+      <!-- Icones cliquables -->
+      <div class="desktop-icons-container">
+        <div>
+          <img
+            src="./assets/img/icons/folder.svg"
+            alt="Dossier Whoami"
+            aria-label="Accéder au dossier Whoami"
+            id="whoamiFolder"
+            data-window="whoami"
+          />
+          <p>Whoami</p>
+        </div>
+        <div>
+          <img
+            src="./assets/img/icons/folder.svg"
+            alt="Dossier Projects"
+            aria-label="Accéder au dossier Projects"
+            id="projectsFolder"
+            data-window="projects"
+          />
+          <p>Projects</p>
+        </div>
+        <div>
+          <img
+            src="./assets/img/icons/folder.svg"
+            alt="Dossier Blog"
+            aria-label="Accéder au dossier Blog"
+            id="blogFolder"
+            data-window="blog"
+          />
+          <p>Blog</p>
+        </div>
+        <div>
+          <img
+            src="./assets/img/icons/folder.svg"
+            alt="Dossier Contact"
+            aria-label="Accéder au dossier Contact"
+            id="contactFolder"
+            data-window="contact"
+          />
+          <p>Contact</p>
+        </div>
+      </div>
     </header>
-    <!-- 🧩 [MAIN] -->
-    <main>
-      <!-- 👩‍💻 Section [ID="whoami"] : Présentation personnelle -->
-      <section id="whoami">
-        <!-- Input pour le menu accordéon -->
-        <input type="radio" name="accordeon" id="first" />
-        <!-- Folder = h2 avec label + content-folder -->
-        <div class="folder">
-          <h2>
-            <label for="first">whoami</label>
-            <span class="sr-only">A propos de moi</span>
-          </h2>
-          <div class="folder-content">
-            <div class="screen">
-              <p>
-                Fichier trouvé :
-                <span class="pre">README.md</span>
-              </p>
-              <div class="markdown">
-                <!-- Fiche de présentation -->
-                <div class="paragraph">
-                  <p class="code">Nom : Jennifer</p>
-                  <p class="code">Alias : jhauck67</p>
-                  <p class="code">Métier : Conductrice de train</p>
-                  <p class="code">Système d'exploitation : Café + Curiosité</p>
-                  <p class="code">Langages : HTML, CSS et un soupçon de JS</p>
-                </div>
-                <div class="separator">---</div>
-                <!-- Petite introduction -->
-                <div class="paragraph">
-                  <p class="code">
-                    Je découvre le développement web petit à petit — une transition entre les rails
-                    du monde physique et les lignes de code du monde numérique.
-                  </p>
-                  <p class="code">
-                    J’avance à mon rythme (et souvent tard le soir), avec l’envie de comprendre
-                    comment les choses fonctionnent
-                    <em>sous le capot.</em>
-                  </p>
-                </div>
-                <div class="paragraph">
-                  <p class="code">
-                    Mon parcours est peut-être atypique, mais il m’a appris à être rigoureuse,
-                    réactive, et autonome.
-                  </p>
-                  <p class="code">
-                    Et spoiler : ça aide aussi quand le train s’arrête au milieu de nulle part 👀
-                  </p>
-                </div>
-                <div class="paragraph">
-                  <p class="code">Ce terminal est mon terrain de jeu. Tu y trouveras :</p>
-                  <ul>
-                    <li>
-                      <p class="code">-</p>
-                      <a
-                        href="https://jhauck67.github.io/Sandbox-Station/"
-                        class="code"
-                        target="_blank"
-                      >
-                        Mes projets
-                      </a>
-                      <p class="code">(plus ou moins terminés mais 100% faits maison)</p>
-                    </li>
-                    <li>
-                      <p class="code">-</p>
-                      <a
-                        href="https://jhauck67.github.io/Memory-Station/"
-                        class="code"
-                        target="_blank"
-                      >
-                        Mes notes techniques,
-                      </a>
-                      <p class="code">triées par tags</p>
-                    </li>
-                    <li>
-                      <p class="code">-</p>
-                      <a
-                        href="https://jhauck67.github.io/Memory-Station/"
-                        class="code"
-                        target="_blank"
-                      >
-                        Quelques idées pour la suite
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="separator">---</div>
-                <!-- Amélioration(s) à venir -->
-                <div class="paragraph">
-                  <p class="code">
-                    🛠️
-                    <strong>En chantier</strong>
-                    : une version interactive, avec plus de fonctionnalités. Mais pour l’instant,
-                    clique sur un dossier pour continuer l’exploration.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- 💾 Section "ls projetcs" -->
-      <section id="projects">
-        <!-- Input pour le menu accordéon -->
-        <input type="radio" name="accordeon" id="second" />
-        <!-- Folder = h2 avec label + content-folder -->
-        <div class="folder">
-          <h2>
-            <label for="second">ls projects/</label>
-            <span class="sr-only">Mes projets</span>
-          </h2>
-          <div class="folder-content">
-            <div class="screen">
-              <div class="paragraph">
-                <p>
-                  Contenu du dossier
-                  <span class="pre">projects/</span>
-                  :
-                </p>
-                <ul>
-                  <li>
-                    📁
-                    <a href="https://jhauck67.github.io/Sandbox-Station/" target="_blank">
-                      integrations/
-                    </a>
-                  </li>
-                  <li>
-                    📁
-                    <a href="https://jhauck67.github.io/Sandbox-Station/" target="_blank">
-                      interactions/
-                    </a>
-                  </li>
-                  <li>
-                    📁
-                    <a href="https://jhauck67.github.io/Sandbox-Station/" target="_blank">
-                      experiments/
-                    </a>
-                  </li>
-                  <li>
-                    📁
-                    <a href="https://jhauck67.github.io/Sandbox-Station/" target="_blank">apps/</a>
-                  </li>
-                </ul>
-                <div class="markdown">
-                  <div class="paragraph">
-                    <h3>
-                      📁
-                      <a href="https://jhauck67.github.io/Sandbox-Station/" target="_blank">
-                        integrations/
-                      </a>
-                    </h3>
-                    <p>Maquettes intégrées à la main, ligne par ligne.</p>
-                    <p>
-                      Pixel-perfect (ou presque) et responsive, comme les devs de l'ancien temps.
-                    </p>
-                    <p>
-                      Tu y trouveras mes exercices de fidélité visuelle : reproduction de designs,
-                      sites fictifs, et autres entraînements front-end
-                      <strong>sans filet</strong>
-                      (ni framework, ni JS).
-                    </p>
-                    <p class="status">&gt; Statut : stable &amp alimenté régulièrement</p>
-                  </div>
-                  <div class="separator">---</div>
-                  <div class="paragraph">
-                    <h3>
-                      📁
-                      <a href="https://jhauck67.github.io/Sandbox-Station/" target="_blank">
-                        interactions/
-                      </a>
-                    </h3>
-                    <p>Premier contact avec la Force… de JavaScript ✨</p>
-                    <p>
-                      Ici, je m’amuse à rendre les interfaces un peu plus vivantes : menus qui
-                      s’ouvrent, contenus qui s’affichent, boutons qui font des trucs.
-                    </p>
-                    <p>
-                      Tout en vanilla JS, parce qu’il faut bien apprendre à marcher avant de sauter
-                      dans React.
-                    </p>
-                    <p class="status">&gt; Statut : en cours d’électrification</p>
-                  </div>
-                  <div class="separator">---</div>
-                  <div class="paragraph">
-                    <h3>
-                      📁
-                      <a href="https://jhauck67.github.io/Sandbox-Station/" target="_blank">
-                        experiments/
-                      </a>
-                    </h3>
-                    <p>Labo secret. Zone de tests.</p>
-                    <p>
-                      Ce dossier contient mes projets
-                      <em>un peu chelous</em>
-                      , mes animations faites à la sueur du keyframe, et tout ce qui ne rentrait
-                      dans aucune case.
-                    </p>
-                    <p>
-                      Style ? Terminal simulé, glitchs CSS, CV interactif, ou effets de texte qui
-                      clignotent (mais avec goût, hein).
-                    </p>
-                    <p class="status">&gt; Statut : instable mais marrant</p>
-                  </div>
-                  <div class="separator">---</div>
-                  <div class="paragraph">
-                    <h3>
-                      📁
-                      <a href="https://jhauck67.github.io/Sandbox-Station/" target="_blank">
-                        apps/
-                      </a>
-                    </h3>
-                    <p>Pour l’instant, c’est un dossier vide… ou presque.</p>
-                    <p>
-                      Mais un jour, il contiendra des
-                      <em>vraies</em>
-                      apps front-end : des trucs avec des appels API, de la logique utilisateur, du
-                      stockage local, etc.
-                    </p>
-                    <p>Bref, ce dossier est un peu comme une promesse. (Ou une TODO.)</p>
-                    <p class="status">&gt; Statut : 💡 idée en cours de chargement</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- 📚 Section "blog" -->
-      <section id="blog">
-        <!-- Input pour le menu accordéon -->
-        <input type="radio" name="accordeon" id="third" />
-        <!-- Folder = h2 avec label + content-folder -->
-        <div class="folder">
-          <h2>
-            <label for="third">blog --tag devlog/</label>
-            <span class="sr-only">Journal de bord du dev web</span>
-          </h2>
-          <div class="folder-content">
-            <div class="screen">
-              <p>Aucun fichier pour l’instant, mais le dossier est prêt à accueillir des logs.</p>
-              <div class="paragraph">
-                <p>Ici, je compilerai mes aventures en développement web :</p>
-                <p>
-                  HTML trop verbeux, CSS capricieux, Git qui fait la tête, Figma qui s’ouvre
-                  lentement, et JavaScript qui fait… du JavaScript.
-                </p>
-              </div>
-              <div class="paragraph">
-                <p>
-                  Bref : un journal honnête et désorganisé de ce que j’apprends, teste, ou démonte
-                  (par erreur) en construisant des projets.
-                </p>
-                <p>Une sorte de mémoire vive personnelle, et peut-être un peu collective aussi.</p>
-              </div>
-              <div class="citation">
-                <p>
-                  &gt; À suivre :
-                  <span class="pre">log_001.md</span>
-                  — dès que j’arrête de réorganiser mes dossiers…
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- 📱 Section "contact" -->
-      <section id="contact">
-        <!-- Input pour le menu accordéon -->
-        <input type="radio" name="accordeon" id="fourth" />
-        <!-- Folder = h2 avec label + content-folder -->
-        <div class="folder">
-          <h2>
-            <label for="fourth">contact --msg/</label>
-            <span class="sr-only">Me contacter</span>
-          </h2>
-          <div class="folder-content">
-            <div class="screen">
-              <div class="paragraph">
-                <p>
-                  Pas de backend ici, juste un formulaire pour faire joli. Mais si tu veux vraiment
-                  me contacter, voici ce qu’il faut savoir :
-                </p>
-                <p>
-                  Tu peux remplir le formulaire qui ne fera rien, ou simplement m'envoyer un message
-                  à l’adresse ci-dessous. 🤖
-                </p>
-              </div>
-              <div class="separator">---</div>
-              <div class="paragraph">
-                <p><strong>📧 Email :</strong></p>
-                <p>
-                  Tu peux m’écrire à
-                  <a href="mailto:jenniferhauck2017@gmail.com">jenniferhauck2017@gmail.com</a>
-                  , je serai ravie de te répondre (sauf si je suis en train de déboguer, dans ce cas
-                  je vais probablement oublier de manger).
-                </p>
-              </div>
-              <div class="paragraph">
-                <p><strong>📱 Réseaux sociaux :</strong></p>
-                <p>
-                  Je suis aussi sur les plateformes sociales, si tu veux échanger, partager des
-                  memes, ou me poser des questions sur le code.
-                </p>
-                <ul>
-                  <li>
-                    <a
-                      href="https://github.com/jhauck67"
-                      aria-label="Suivez-moi sur GitHub"
-                      target="_blank"
-                    >
-                      GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/jennifer-hauck-b125252a2/"
-                      aria-label="Suivez-moi sur Linkedin"
-                      target="_blank"
-                    >
-                      Linkedin
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://codepen.io/jhauck67"
-                      aria-label="Suivez-moi sur CodePen"
-                      target="_blank"
-                    >
-                      Codepen
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="separator">---</div>
-              <div class="citation">
-                <p>
-                  <strong>Disclaimer</strong>
-                  : Si tu veux vraiment utiliser le formulaire, c’est cool aussi. Je t’avertis juste
-                  qu’il est… plus décoratif que fonctionnel pour l’instant. 😜
-                </p>
-              </div>
-              <div class="separator">---</div>
-              <form>
-                <label for="name">Nom :</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  autocomplete="name"
-                  placeholder="Ton nom ici"
-                />
-                <label for="email">Email :</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  autocomplete="email"
-                  placeholder="ton@email.com"
-                />
-                <label for="message">Message :</label>
-                <textarea name="message" id="message" placeholder="Ton message ici..."></textarea>
-                <input type="checkbox" name="submit" id="submit" />
-                <label for="submit" id="submit-button">Envoyer le message</label>
-                <p class="confirmation-message">
-                  Merci pour ton message ! Je reviendrai vers toi… dès que je trouve comment ça
-                  marche. 😉
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    <!-- ----- -->
+    <!-- Script Javascript -->
+    <script type="module" src="./assets/scripts/index.js" defer></script>
   </body>
 </html>
