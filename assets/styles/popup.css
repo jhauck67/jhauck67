@@ -136,12 +136,12 @@
     font-size: 0.75rem;
   }
   .popup-title h2 {
-    transform: translateX(30px);
+    transform: translateX(35px);
   }
   #burger {
     display: block;
     position: absolute;
-    left: 0;
+    left: 5px;
     transform: translateY(-3px);
     font-size: 1.5rem;
     cursor: pointer;
