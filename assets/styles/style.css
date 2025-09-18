@@ -15,6 +15,30 @@
   font-display: swap;
 }
 
+/* *----------VARIABLES----------* */
+:root {
+  /* Fonts */
+  --title: 'Orbitron', fantasy;
+  --text: 'IBM Plex Sans', sans-serif;
+  --code: 'JetBrains Mono', monospace;
+
+  /* Palette principale */
+  --black: #0d0d0d;
+  --anthracite: #2d2d2d;
+  --darkgrey: #2d3738;
+  --grey: #718c8d;
+  --lightgrey: #dbdbdb;
+  --white: #efeeee;
+  --principal: #39ff14;
+
+  /* Variations de couleur */
+  --hover: #bcffb0f3;
+  --dark-color: #1f7110;
+  --hover-dark-color: #2a9716;
+  --transparent-light: #39ff14af;
+  --transparent-dark: #258a13af;
+}
+
 /* *----------PARAMETRES GENERAUX----------* */
 *,
 *::before,
@@ -27,7 +51,7 @@
 body {
   width: 100dvw;
   height: 100dvh;
-  background: #0d0d0d;
+  background: var(--black);
   overflow-x: hidden;
 }
 
@@ -39,34 +63,34 @@ a,
 a:visited,
 .link {
   text-decoration: none;
-  color: #39ff14;
-  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--principal);
+  font-family: var(--text);
 }
 
 .titre {
-  font-family: 'Orbitron', fantasy;
+  font-family: var(--title);
 }
 
 h1 {
-  color: #39ff14;
+  color: var(--principal);
   font-weight: 800;
 }
 
 h2 {
-  color: #ffffff;
+  color: var(--white);
   font-weight: 700;
   padding: clamp(20px, 1.25rem + (1vw - 3.2px) * 0.8929, 30px) 0;
 }
 
 p {
-  color: #ffffff;
-  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--white);
+  font-family: var(--text);
   padding: 5px 0;
 }
 
 .code {
-  color: #ffffff;
-  font-family: 'JetBrains Mono', monospace;
+  color: var(--white);
+  font-family: var(--code);
 }
 
 /* *----------STYLE DU HEADER----------* */
@@ -113,7 +137,7 @@ p {
   transform: scale(1.05);
 }
 .desktop-icons-container > div:hover img {
-  box-shadow: 0 0 5px #39ff14;
+  box-shadow: 0 0 5px var(--principal);
 }
 .desktop-icons-container img {
   width: 60px;

@@ -18,7 +18,7 @@
   aspect-ratio: 16/10;
   z-index: 100;
   border-radius: 20px;
-  box-shadow: 2px 2px 10px #39ff14b3;
+  box-shadow: 2px 2px 10px var(--transparent-light);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,10 +39,10 @@
   margin: 10px 5px;
 }
 .popup-sidebar .separator {
-  background-color: #37ff14af;
+  background-color: var(--transparent-light);
 }
 .popup-content .separator {
-  background-color: #258a13af;
+  background-color: var(--transparent-dark);
 }
 /* Style légende de texte */
 .popup-content .status {
@@ -52,7 +52,7 @@
 /* Style de la barre de titre */
 .popup-header {
   grid-area: he;
-  background: #252525;
+  background: var(--anthracite);
   padding: 0 8px;
   border-top-right-radius: 20px;
   display: flex;
@@ -76,7 +76,7 @@
 /* Style de la sidebar */
 .popup-sidebar {
   grid-area: sb;
-  background: #2e2e2e;
+  background: var(--darkgrey);
   border-radius: 20px 0 0 20px;
 }
 .sidebar-container {
@@ -88,15 +88,15 @@
 .sidebar-container ul li:hover,
 .sidebar-container ul li:hover a {
   transform: scale(1.05);
-  background: #bcffb0f3;
-  color: #2e2e2e;
+  background: var(--hover);
+  color: var(--anthracite);
   font-weight: bold;
 }
 
 /*Style du contenu */
 .popup-content {
   grid-area: co;
-  background: #dbdbdb;
+  background: var(--lightgrey);
   border-bottom-right-radius: 20px;
   overflow-y: auto;
 }
@@ -107,16 +107,16 @@
   padding-bottom: 10px;
 }
 .popup-content p {
-  color: black;
+  color: var(--black);
   padding: 0;
 }
 .popup-content a {
-  color: #1f7110;
+  color: var(--dark-color);
   display: inline-block;
 }
 .popup-content a:hover {
   font-weight: bold;
-  color: #2a9716;
+  color: var(--hover-dark-color);
   transform: scale(1.05);
 }
 
@@ -177,14 +177,14 @@ form > div {
   gap: 10px;
 }
 form label {
-  font-family: 'IBM Plex Sans';
+  font-family: var(--text);
 }
 input,
 textarea {
   background: transparent;
-  border: 1px solid #2e2e2e;
+  border: 1px solid var(--anthracite);
   border-radius: 5px;
-  font-family: 'IBM Plex Sans';
+  font-family: var(--text);
   resize: none;
 }
 textarea {
@@ -193,12 +193,12 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border: 1px solid #1f7110;
-  box-shadow: 0 0 5px #1f7110;
+  border: 1px solid var(--dark-color);
+  box-shadow: 0 0 5px var(--dark-color);
 }
 input[type='submit'] {
   padding: 5px 10px;
   border-radius: 5px;
-  background: #1f7110;
-  color: white;
+  background: var(--dark-color);
+  color: var(--white);
 }
