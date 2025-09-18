@@ -65,8 +65,11 @@ export const popup = (e) => {
             sidebar.innerHTML += `${data.windows[4].content}`;
 
             // 3. On lie les "liens" de la sidebar avec les fenêtres dynamiques.
-            const links = document.querySelectorAll('.popup-link');
-            links.forEach((link) => link.addEventListener('click', popup));  
+            popupSidebar.addEventListener(('click'), (e) => {
+                if (e.target.closest('.popup-link')) { // On cherche le parent qui contient le selecteur
+                    popup(e);
+                };
+            });
 
             // 4. On crée un lien "Accueil".
             const homeBtn = document.querySelector('.home');

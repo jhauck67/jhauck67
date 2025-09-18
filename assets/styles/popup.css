@@ -142,7 +142,7 @@
     display: block;
     position: absolute;
     left: 5px;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     font-size: 1.5rem;
     cursor: pointer;
   }
