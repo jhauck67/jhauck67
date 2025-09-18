@@ -4,7 +4,7 @@ const data = {
     windows: [
         {
             id: "whoami",
-            title: `<h2><span id="burger">🍔</span> #whoami : Qui suis je?</h2>`,
+            title: `<h2>#whoami : Qui suis je?</h2>`,
             content: 
             `
             <!-- Fiche de présentation -->
@@ -52,7 +52,7 @@ const data = {
         },
         {
             id: "projects",
-            title: `<h2><span id="burger">🍔</span> #projects : Projet et création</h2>`,
+            title: `<h2>#projects : Projet et création</h2>`,
             content: 
             `
             <div class="paragraph">
@@ -93,7 +93,7 @@ const data = {
         },
         {
             id: "blog",
-            title: `<h2><span id="burger">🍔</span> #blog : Chroniques du dev</h2>`,
+            title: `<h2>#blog : Chroniques du dev</h2>`,
             content: 
             `
             <div class="paragraph">
@@ -115,7 +115,7 @@ const data = {
         },
         {
             id: "contact",
-            title: `<h2><span id="burger">🍔</span> #contact : Restons en contact</h2>`,
+            title: `<h2>#contact : Restons en contact</h2>`,
             content: 
             `
             <div class="paragraph">

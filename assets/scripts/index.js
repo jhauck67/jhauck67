@@ -5,9 +5,6 @@ import { popup } from './popup.js';
 //---------------------------------
 
 // ***** VARIABLES *****
-// Desktop
-const desktop = document.querySelector('.desktop');
-
 // Bouton replay
 const replay = document.querySelector('#replay');
 
