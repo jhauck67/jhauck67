@@ -9,6 +9,12 @@
   padding: 10px;
 }
 
+@media screen and (max-width: 700px) {
+  .introText-container {
+    max-width: 90%;
+  }
+}
+
 /* ----------ANIMATIONS---------- */
 
 /* Création d'un curseur + Animation curseur */
