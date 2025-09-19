@@ -1,0 +1,95 @@
+/* *----------IMPORT DES FONTS----------* */
+@font-face {
+  font-family: 'Orbitron';
+  src: url(../fonts/Orbitron-VariableFont_wght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Sans';
+  src: url(../fonts/IBMPlexSans-VariableFont_wdth-wght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
+  font-display: swap;
+}
+
+/* *---------------VARIABLES---------------* */
+:root {
+  /* *********** COLORS ********** */
+  /* Entrez les valeurs de la couleur de base en hsl */
+  --hue: 111;
+  --sat: 100%;
+  --light: 54%;
+
+  /* ***** Branding Color ***** */
+  /* Palette de base */
+  --main-color-light: hsl(
+    var(--hue),
+    calc((2 / 3) * var(--sat)),
+    calc((2 / 3) * var(--light) + 33%)
+  );
+  --main-color: hsl(var(--hue), var(--sat), var(--light));
+  --main-color-dark: hsl(var(--hue), calc(50% + var(--sat) / 2), calc(var(--light) / 2));
+
+  /* Variation en transparence */
+  --transparent10: hsla(var(--hue), var(--sat), var(--light), 0.1); /* séparateur, ombre fine */
+  --transparent30: hsla(
+    var(--hue),
+    var(--sat),
+    var(--light),
+    0.3
+  ); /* fond de carte, bordure+visible */
+  --transparent60: hsla(
+    var(--hue),
+    var(--sat),
+    var(--light),
+    0.6
+  ); /* overlays, fond semi-transparent derrière texte, survol */
+  --transparent90: hsla(
+    var(--hue),
+    var(--sat),
+    var(--light),
+    0.9
+  ); /* effet de survol bouton/lien, actif */
+
+  /* Effets d'ombre */
+  --shadow-color: 0 10px 20px 0 hsla(var(--hue), var(--sat), var(--light), 0.15),
+    0 5px 10px 0 hsla(var(--hue), var(--sat), var(--light), 0.1),
+    0 2px 4px 1px hsla(var(--hue), var(--sat), var(--light), 0.05);
+  --shadow-black: 0 10px 20px 0 hsla(0, 0%, 22%, 0.15), 0 5px 10px 0 hsla(0, 0%, 22%, 0.1),
+    0 2px 4px 1px hsla(0, 0%, 22%, 0.05);
+  --shadow-white: 0 10px 20px 0 hsla(0, 0%, 79%, 0.15), 0 5px 10px 0 hsla(0, 0%, 79%, 0.1),
+    0 2px 4px 1px hsla(0, 0%, 79%, 0.05);
+
+  /* ***** Neutral ***** */
+  --neutral0: hsl(0, 0%, 98%);
+  --neutral1: hsl(0, 0%, 79%);
+  --neutral2: hsl(0, 0%, 60%);
+  --neutral3: hsl(0, 0%, 41%);
+  --neutral4: hsl(0, 0%, 22%);
+  --neutral5: hsl(0, 0%, 3%);
+
+  /* *-----------VARIABLES SEMANTIQUE-----------* */
+
+  /* ***** Font-Family: ***** */
+  --font-title: 'Orbitron', fantasy;
+  --font-text: 'IBM Plex Sans', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  /* ***** Background-color: ***** */
+  --background-color-primary: var(--neutral5); /* background du Desktop */
+  --background-color-secondary: var(--neutral0); /* background de la Popup */
+
+  /* ***** Text: ***** */
+  --color-text-primary: var(--neutral0); /* couleur du texte de base */
+  --color-text-secondary: var(--neutral5); /* couleur du texte de la popup */
+
+  /* ***** Accent ***** */
+  --color-accent-primary: var(--main-color); /* couleur d'accentuation (titres, liens...) */
+  --color-accent-secondary: var(--main-color-dark); /* couleur d'accentuation dans la popup */
+
+  /* ***** Hover ***** */
+  --color-hover-secondary: var(--transparent90); /* effet au survol dans la fenêtre popup */
+}
