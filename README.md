@@ -1,6 +1,6 @@
-![# Projet Gaming Campus](assets/sketch/github-header-image.png)
+![Mon-Terminal](assets/sketch/github-header-image.gif)
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Gimp Gnu Image Manipulation Program](https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)  
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white) ![Javascript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Gimp Gnu Image Manipulation Program](https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF) ![Visual Studio Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)  
 ![Responsive Design](https://img.shields.io/badge/Responsive_Design-Mobile_Friendly-2ea44f) ![Optimisation des images](https://img.shields.io/badge/Optimisation%20des%20images-Squoosh-blue) ![SEO Friendly](https://img.shields.io/badge/SEO-Friendly-2ea44f)  
 \
 ![Lighthouse](https://img.shields.io/badge/Lighthouse-white?style=for-the-badge&logo=lighthouse)
@@ -20,52 +20,42 @@ Il est pensé pour être à la fois un carnet de bord numérique et un laboratoi
 
 - <img src="https://go-skill-icons.vercel.app/api/icons?i=html" alt="Logo HTML" style="width:16px; height:auto;"> HTML 5
 - <img src="https://go-skill-icons.vercel.app/api/icons?i=css" alt="Logo CSS" style="width:16px; height:auto;"> CSS 3
-- <img src="https://go-skill-icons.vercel.app/api/icons?i=sass" alt="Logo SASS" style="width:16px; height:auto;"> SASS
+- <img src="https://go-skill-icons.vercel.app/api/icons?i=javascript" alt="Logo Javascript" style="width:16px; height:auto;"> Javascript
 - <img src="https://go-skill-icons.vercel.app/api/icons?i=git" alt="Logo GIT" style="width:16px; height:auto;"> GIT
 - <img src="https://go-skill-icons.vercel.app/api/icons?i=githubpages" alt="Logo GitHub Pages" style="width:16px; height:auto;"> GitHub Pages
 
 # Fonctionnalités :
 
-- 🖥️ **Version Desktop** : Mise en place de la version pour les écrans de taille standard et grande taille.
-- 📱 **Version Mobile** : Adaptation de la maquette pour les petits écrans (smartphones).
-- 🔎 **Optimisation SEO** : Travail sur la structure du site pour le rendre plus visible dans les moteurs de recherche.
-- 🖼️ **Optimisation des images** : Toutes les images ont été redimensionnées, reformattées et compressées pour un meilleur temps de chargement et une efficacité maximale.
+- 🖥️ **Design Rétro-Minimaliste :** Interface interactive inspirée des terminaux d'antan, conçue pour un affichage sur un écran de bureau.
+- 📱 **Version Mobile Responsive :** Adaptation de la maquette pour les smartphones, en utilisant des **Media Queries** pour une expérience utilisateur fluide sur tous les écrans.
+- 🧭 **Navigation JavaScript :** Utilisation de JavaScript vanilla (JS pur, sans librairie) pour une navigation dynamique, avec un système de fenêtres pop-up qui s'ouvrent au clic sur chaque icône.
+- 🕶️ **Accessibilité (A11Y) :** Utilisation d'attributs ARIA pour améliorer l'expérience des utilisateurs de lecteurs d'écran.
 
 # Détails du code :
 
-Le code a été structuré pour être facile à maintenir et à développer.
-
-- **SASS** est utilisé pour la gestion des styles, permettant une hiérarchisation claire et une réutilisation efficace des styles grâce à des variables, des mixins et des partials.
+Le code a été structuré pour être facile à lire et à maintenir. Voici un aperçu des technologies et des bonnes pratiques utilisées :
+- **HTML sémantique :** L'utilisation de balises HTML pertinentes (comme `<main>`, `<section>`, etc.) permet une meilleure accessibilité et une structure de page claire pour les navigateurs et les lecteurs d'écran.
+- **CSS modulaire :** Les styles sont organisés dans des fichiers distincts (`variables.css`, `style.css`, `intro.css`, `popup.css`), ce qui facilite leur gestion. L'utilisation de variables CSS permet de centraliser et de modifier facilement les couleurs, les polices et les ombres.
+- **JavaScript Vanilla :** Le code JavaScript est écrit en JS pur, sans dépendance à des librairies externes. Le découpage en modules (`index.js`, `intro.js`, `popup.js`, `data.js`) rend le code plus lisible et réutilisable.
 
 ## Structure du projet :
 
 ```plaintext
-/ (root)
-│
-├── index.html                          # Page principale du site
-├── assets                              # Dossier pour les images, polices, maquettes, styles
-│   ├── fonts/                          # Dossier pour les polices
-│   ├── img/                            # Dossier pour les images
-│   ├── scripts/                        # Dossier pour les fichiers JS
-│   │   ├── index.js                    # Fichier principal SASS
-│   ├── sketch/                         # Dossier pour les maquettes
-│   ├── styles/                         # Dossier contenant les fichiers CSS et SASS
-│   │   ├── base/                       # Dossier pour les styles de base
-│   │   │   ├── _reset.scss             # Fichier de reset des paramètres navigateur
-│   │   │   ├── _global.scss            # Fichier des paramètres globaux
-│   │   │   ├── _typographie.scss       # Fichier des styles de typographie
-│   │   │   ├── _fluid-responsive.scss  # Fichier pour gérer le fluid responsive
-│   │   ├── components/                 # Dossier pour les styles des composants
-│   │   ├── layouts/                    # Dossier pour les styles de mise en page
-│   │   ├── utils/                      # Dossier pour les mixins, variables
-│   │   │   ├── _mixins.scss            # Fichier de mixins
-│   │   │   ├── _variables.scss         # Fichier de variables
-│   │   ├── index.css                   # Fichier principal CSS généré depuis SASS
-│   │   ├── index.scss                  # Fichier principal SASS
-├── readme.md                           # Documentation du projet
-├── .gitignore                          # Fichier gitignore
-├── LICENSE                             # Fichier License
-├── .github/                            # Dossier pour les workflows et templates d'issues
+.
+├── assets/                     # Fichiers statiques (images, polices, styles)
+│   ├── fonts/
+│   ├── img/
+│   └── scripts/                # Scripts JS
+│       ├── intro.js            # Script pour l'animation d'introduction
+│       ├── popup.js            # Script pour la gestion des fenêtres pop-up
+│       ├── index.js            # Fichier JavaScript principal
+│       └── data.js             # Contenu dynamique des pop-ups
+│   └── styles/                 # Feuilles de styles CSS
+│       ├── intro.css           # Styles pour l'animation d'introduction
+│       ├── popup.css           # Styles pour la fenêtre pop-up
+│       ├── style.css           # Styles principaux du site
+│       └── variables.css       # Variables CSS globales
+├── index.html                  # Page principale du site
 ```
 
 # Aperçu
