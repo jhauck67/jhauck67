@@ -1,4 +1,4 @@
-![github-header](/github-header.png)
+<img src="https://raw.githubusercontent.com/jhauck67/Banner-name/refs/heads/main/Jhauck.svg" alt="Bannière animée de Jennifer, conductrice de train et développeuse web">
 
 
 # 💫 About Me:
