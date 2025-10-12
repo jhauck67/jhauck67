@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/jhauck67/Banner-name/refs/heads/main/Jhauck.svg" alt="Bannière animée de Jennifer, conductrice de train et développeuse web">
+<img src="https://raw.githubusercontent.com/jhauck67/jhauck67/refs/heads/main/Jhauck.svg" alt="Bannière animée de Jennifer, conductrice de train et développeuse web">
 
 
 # 💫 About Me:
